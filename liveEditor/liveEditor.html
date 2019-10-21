@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>html editor</title>
+
+  <link id="view" href='/liveEditor/view/originalview.css' rel='stylesheet' s>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+  
+</head>
+
+<body>
+  <div class='button'>
+    
+    <div><a class='reset' id="home" href='/index.html'>HOME </a></div>
+
+    <div><a class='reset' onclick="oringinalView()">Oringinal View</a></div>
+    <div><a class='reset' onclick="squareView()" >Square View</a></div>
+    <div><a class='reset' id='run' onclick="update()">RUN</a></div>
+     <div class='soloView' onmouseover='showDropDown()' onmouseout="shutDropDown()"><a>Solo View</a></div> 
+
+      <div id='singleView'>
+        <a class='' onclick="verticalViewHTML()"onmouseover='showDropDown()' onmouseout="shutDropDown()">HTML </a>
+        <a class='' onclick="verticalViewCSS()" onmouseover='showDropDown()' onmouseout="shutDropDown()">CSS</a>
+        <a class='' onclick="verticalViewJS()"onmouseover='showDropDown()' onmouseout="shutDropDown()">JS</a>
+     </div> 
+
+
+</div>
+  <!-- </div class="editor-name">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JAVSCRIPT</div>
+  </div> -->
+
+  <div id='container'>
+    <div class="editor"id="editor1"></div>
+    <div class="editor" id="editor2"></div>
+    <div class="editor"id="editor3"></div>
+    <iframe id='iframe' frameBorder="0"></iframe>
+  </div>
+  <!-- <div class='bg-modal'>
+    <div id='modal'>
+      <div>Are you sure you want to reset?</div>
+      <a id='yes'>yes</a>
+      <a id='no'>no</a>
+    </div>  -->
+    
+  <!-- <script src='button.js'></script> -->
+   
+  <script src="./js/editor.js"></script>
+  <script src="./js/stylesheet.js"></script>
+
+
+
+</body>
+
+</html>

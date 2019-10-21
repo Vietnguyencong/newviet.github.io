@@ -1,0 +1,224 @@
+<html>
+
+<head>
+  <title>javascript editor</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: monospace;
+      background: black
+    }
+
+    #editor {
+      height: 100%;
+      width: 50%;
+      display: inline-block;
+    }
+
+    #container {
+      height: 100%;
+      width: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #iframe {
+      height: 100%;
+      display: inline-block;
+      width: 50%;
+      background: white;
+    }
+
+    #liveeditor-bar div {
+      display: inline-block;
+      list-style: none;
+
+    }
+
+    .normal-link {
+      text-decoration: none;
+      padding: 10px;
+      font-size: 20px
+    }
+
+    #liveeditor-bar div a:hover {
+      color: #eb3b5a;
+    }
+
+    #home {
+      text-decoration: none;
+      font-size: 30px;
+      color: #ffbe76;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .heading {
+      margin: 20px;
+      display: inline-block;
+
+    }
+
+    .button a {
+      border-radius: 20px;
+      background-color: #10ac84;
+      border: 3px solid white;
+      text-decoration: none;
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px
+    }
+
+    .button a:hover {
+      background-color: white;
+      border: 3px solid red;
+      cursor: pointer;
+    }
+
+
+    .bg-modal {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    #modal {
+      position: relative;
+      width: 360px;
+      height: 200px;
+      background-color: white;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    #modal div {
+      position: absolute;
+      top: 40;
+      width: 100%;
+
+    }
+
+    #modal a {
+      position: absolute;
+      top: 50%;
+
+    }
+
+    #yes {
+      right: 40%;
+      cursor: pointer;
+    }
+
+    #yes:hover {
+      color: #54a0ff;
+    }
+
+    #no {
+      left: 40%;
+      cursor: pointer;
+    }
+
+    #no:hover {
+      color: #ff6b6b
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+</head>
+
+<body>
+  <div id='liveeditor-bar'>
+    <div><a id='home' href='content2.html'>#vietWed</a></div>
+    <div><a class='normal-link' href=''>Code</a></div>
+    <div><a class='normal-link' href=''>Relax</a></div>
+  </div>
+
+  <div class='button'>
+    <div class='heading'><a id='reset'>RESET</a></div>
+    <div class='heading'><a id='back'>Go back to Reset</a></div>
+  </div>
+
+  <div id='container'>
+    <div id="editor" ></div>
+    <iframe id='iframe' frameBorder="0"></iframe>
+
+  </div>
+  <div class='bg-modal'>
+    <div id='modal'>
+      <div>Are you sure you want to reset?</div>
+      <a id='yes'>yes</a>
+      <a id='no'>no</a>
+    </div>
+
+</body>
+
+<script>
+  window.editor = ace.edit("editor");
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/javascript");
+  editor.setOptions({
+    fontSize: "13pt",
+    showLineNumbers: true,
+    showGutter: true,
+    vScrollBarAlwaysVisible: false,
+    enableBasicAutocompletion: true, 
+    enableLiveAutocompletion: false
+  });
+  editor.setValue(``, 1); //1 = moves cursor to end
+  editor.focus();
+
+  editor.getSession().on('change', function () {
+    update();
+  });
+  
+  // set the old value for editor
+  var oldvalue
+  
+  //reset button
+
+  document.getElementById('reset').addEventListener('click', function () {
+    document.querySelector('.bg-modal').style.display = 'flex'
+  })
+  // click yes for reset
+  document.getElementById('yes').addEventListener('click', function () {
+    document.querySelector('.bg-modal').style.display = 'none'
+    oldvalue = editor.getValue()
+    console.log(oldvalue)
+    editor.setValue(``)
+    editor.focus()
+  })
+  //click no for reset to return to empty string
+  document.getElementById('no').addEventListener('click', function () {
+    document.querySelector('.bg-modal').style.display = 'none'
+    editor.focus();
+  })
+// click 'go back' to go back to the old value string
+  document.getElementById('back').addEventListener('click', function () {
+    editor.setValue(`${oldvalue}`)
+  })
+  function update() {
+    var idoc = document.getElementById('iframe').contentWindow.document;
+    idoc.open();
+    idoc.write(editor.getValue());
+    idoc.close();
+  }
+</script>
+
+</body>
+
+</html>
