@@ -13,7 +13,7 @@ function verticalViewHTML(){
 
 }
 function verticalViewCSS(){
-    document.getElementById('view').setAttribute('href','view/verticalViewCSS.css')
+    document.getElementById('view').setAttribute('href','view/verticalviewCSS.css')
 
 }
 function verticalViewJS(){  
