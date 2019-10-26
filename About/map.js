@@ -41,7 +41,7 @@ var my_locations =[
   var image_array= new Array();
   function initialize() {
   // make a table for the text below the map
-    os="<table style='font-size:17px' border='0'><tr><td colspan='2'><center><b>Places which are closed to me where I had some memorable experience(<a target='_blank'href='https://vietnguyencong.github.io/newviet.github.io/'>see more</a>)</td></tr>";
+    os="<table style='font-size:14px' border='0'><tr><td colspan='2'><center><b>Places which are closed to me where I had some memorable experience(<a target='_blank'href='https://vietnguyencong.github.io/newviet.github.io/'>see more</a>)</td></tr>";
   // create the map
     var map = new google.maps.Map(document.getElementById("map_canvas"));  
   // create the bounds objects (to hold all the lat and lng values to find the extent of the map  
