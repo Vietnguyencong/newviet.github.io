@@ -18,6 +18,7 @@ function setupEditor1()
 
 </head>
 <body>
+  <marquee>Hello</marquee>
   <div id="viet"></div>
 </body>
 </html>`,1); //1 = moves cursor to end

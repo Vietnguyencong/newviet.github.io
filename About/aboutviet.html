@@ -1,29 +1,98 @@
 <html>
 
 <head>
-    <title>viet's wedsite 2</title>
-    <link href='style2.css' rel='stylesheet' type='text/css'>
+    <title>About Me</title>
+    <link href='style.css' rel='stylesheet' type='text/css'>
     <script src="https://kit.fontawesome.com/42d9ef7afe.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfANLcAH201P-z99a2taZLEu1huFVBcoE"></script>
+    <script src="map.js"></script>
 </head>
 
-<body>
-    <header>
-        <h2>About</h2>
-        <p id='about'>My name is Viet. I am a student at University of Houston. I came to the U.S in Fall 2018 and I am always of being here excited because I learn somethings everyday.
-            My dream is to become a programmer. I am very happy when you visit this wedsite. I believe this wedsite can help you how to learn how to do some codes, particularly in HTML and Javascript. </p>
-        <div id='back'><a  href='content2.html'>Back</a></div>
-        <!--contact session-->
-       
+<body onload="initialize()">
+<header>
+        <div id='about'>ABOUT:</div>
+        <p id='content'>
+My name is Viet! I am a student at University of Houston. 
+I came to the U.S in Fall 2018 and have ever less being excited because I learn somethings everyday.
+I was born in Vietnam and very proud of being a Vietnamese. I love my country and my family so much 
+(<a href="#map">click here to see more places where I grew up</a>)<br>
+This website features the live editor of HTML, CSS, Javascript. 
+You can see your result right away with whatever you are inputing into the live editors by easily clicking "RUN"
+<br>
+The reason I made this website is that I want to improve my coding skills while I can help others practice coding too. 
+Coding is one of hobby that helps me relax after classes. Through this website, hopefully, I can find someone who can share the hopbby with me. 
+So, please reach out if intersted in coding back-end, front-end, new technology, etc.
+
+<br>
+
+</p>
+        <div id='home'><a  href='../index.html'>Back</a></div>
+</header>
+<div class="contact">
+    <ul>
+        <li>
+            <a href="https://vietnguyencong99@gmail.com" title="vietnguyencong99@gmail.com">
+                    <span></span>
+                    <span></span>   
+                    <span></span>
+                    <span></span>
+                <span class="fab fa-google-plus-g"></span>
+              
+            </a>
             
+            </li>
+        <li>
+            <a href="https://www.linkedin.com/in/vietnguyencong/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <span class="fab fa-linkedin-in"></span>
+          
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/bimm.thanh">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <span class="fab fa-facebook-f"></span>
+          
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/vietnguyenc/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <span class="fab fa-instagram"></span>
+             
+            </a>
+        </li>
+        <li>
+            <a href="../resume/resume.html" target="_blank" title="resume">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <span class="fas fa-file"></span>
+             
+            </a>
+        </li>
+    </ul>
+</div>
 
-        
-        
-
-    </header>
 
 
+<div id="map" >
+    <!--- the map is define on the page as a DIV block with id="map_canvas" and is 700 by 700 pixels with a black border -->
+    <div id="map_canvas" style="height:700px;width:700px;"></div>
+    <p>
+    <!--- the table is displayed below the map in a DIV block with id="sol" and is 700 pixels wide with a black border -->
+    <div id="sol" style="width:700px;font-size: 30px;">
+    <p>
+</div>
 </body>
-
-
-
 </html>

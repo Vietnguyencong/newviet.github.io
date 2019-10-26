@@ -155,3 +155,14 @@ body {
   background:#ced6e0;
 }
   .soloView:hover #singleView{display: block;}
+    /* theme */
+#theme{
+  position:absolute;
+  right:12;top:0;
+  background: none;
+  color: #bdc3c7;
+  font-size: 20px
+}
+#run{
+  background: #2ecc71;
+}

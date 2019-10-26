@@ -7,6 +7,7 @@
 
 }
 
+/* the bottom screen */
 header{
     background-color: black;
     height:100%;
@@ -80,6 +81,8 @@ h2{
 }
 
 
+/* the top screen */
+
 #vietImg{
     position: relative;
     height: 100%;
@@ -95,14 +98,16 @@ h2{
     top: 100px; text-align: center;
     
 }
-#vietImg img{
+#vietImg img
+{
     height: 40%;
-    
+    cursor: pointer;
 }
+
 #downIcon{
     position: absolute;
     text-align: center;
-    bottom: 100px
+    bottom: 60px
 }
 #downIcon i{
     font-size: 80px;
@@ -116,7 +121,7 @@ h2{
 #upIcon{
     position: absolute;
     text-align: center;
-    bottom: 100px;
+    bottom: 40px;
     
 }
 #upIcon i{
