@@ -35,7 +35,8 @@ var my_locations =[
      10.877416, 106.801748,"Q","ff00ff"],
     ["Land Mark 81, Ho Chi Minh city December 2018",
   "The highest buuilding in Vietnam, <a target='_blank' href='https://vi.wikipedia.org/wiki/The_Landmark_81'>see more</a> ",   10.795663, 106.719260,"E","8888ff"],
-  ["Dalat city July 2019", "I had very good time with my family at this place in the last summer. This is also a place where I want to live or spend my honey moon with my future wife in the future <a target='_blank' href='https://www.google.com/search?q=dalat+city&sxsrf=ACYBGNRXFHVxsC1eXTmCLfbNjywYyJWf7A:1571866897419&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiv8LfArLPlAhUOZKwKHTTzDZUQ_AUIEigB&biw=1396&bih=657'>see more</a>",
+  
+  ["Dalat city July 2019(<a target='_blank'href='https://www.facebook.com/amazingvietnampage/videos/2448112148807288/'>see even more</a>)", "I had very good time with my family at this place in the last summer. This is also a place where I want to live or spend my honey moon with my future wife in the future <a target='_blank' href='https://www.google.com/search?q=dalat+city&sxsrf=ACYBGNRXFHVxsC1eXTmCLfbNjywYyJWf7A:1571866897419&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiv8LfArLPlAhUOZKwKHTTzDZUQ_AUIEigB&biw=1396&bih=657'>see more</a>",
   11.901510, 108.429832,"W","34495e"]
   ];  
   var image_array= new Array();
