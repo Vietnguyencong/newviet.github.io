@@ -1,82 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Practice Code</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
-    
+<head>
+  <title>Practice Code</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  </head>
-  <body>
-      <header>
-        <ul>
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="../liveEditor/liveEditor.html">Live Editor</a></li>
-            <li><a href="#">Relax</a></li>
-            
-            <li id="namepage"><a href=""></a><b>Practice Code</b></a></li>
+  <!-- Bootstrap CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
 
-        </ul>   
-      </header>
-      <div id="container">
-          <nav id="sidebar">
-            <ul>
-                <li><a href=""><b style="font-size:12pt;">Assignment 1</b></a></li>
-                <li><a href="#q1">Question 1</a></li>
-                <li><a href="#q2">Question 2</a></li>
-                <li><a href="#q3">Question 3</a></li>
-                <li><a href="">Question 4</a></li>
-                <li><a href="">Question 5</a></li>
-                <li><a href="">Question 6</a></li>
-                <li><a href="">Question 7</a></li>
-                <li><a href="">Question 8</a></li>
-                <li><a href="">Question 9</a></li>
-                <li><a href="">Question 10</a></li>
-                <li><a href="">Question 11</a></li>
-                <li><a href="">Question 12</a></li>
-                <li><a href="">Question 13</a></li>
-                <li><a href="">Question 14</a></li>
-                <li><a href="">Question 15</a></li>
-                <li><a href="">Question 16</a></li>
-                <li><a href="">Question 17</a></li>
-                <li><a href="">Question 18</a></li>
-                <li><a href="">Question 19</a></li>
-                <li><a href="">Question 20</a></li>
-                <li><a href="">Question 21</a></li>
-                <li><a href="">Question 22</a></li>
-                <li><a href="">Question 23</a></li>
-                <li><a href="">Question 24</a></li>
-                <li><a href="">Question 25</a></li>
-            </ul>
-          </nav>
-          <article id="content">
-            <div id="q1">CONTENT 1
-                <div class="box">
-                    <div class="headbar"><a onclick="runcode('result1')">RUN</a></div>
-                    <div class="editor" id="edit1">
-                        <div class='code' id="code1"></div>
-                        <iframe class="result" id="result1">result here</iframe>
-                    </div>
-                </div>
-            </div>
-            <br><br><br><br><br><br><br><br><br>
-            <div id="q2">content right here2</div>
-            <br><br><br><br><br><br><br><br><br>
-            <div id="q3">content right here3</div>
-            <br><br><br><br><br><br><br><br><br>
-            <div id="q4">content right here4</div>
-            <br><br><br><br><br><br><br><br><br>
-            <div id="q5">content right here5</div>
-            <br><br><br><br><br><br><br><br><br>
 
-          </article>
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../liveEditor/liveEditor.html">Live Editor</a></li>
+      <li><a href="#">Relax</a></li>
+      <li id="namepage"><a href=""></a><b>Practice Code</b></a></li>
+
+    </ul>
+  </header>
+  <div id="container">
+    <nav id="sidebar">
+      <ul>
+        <li onclick="show_hide('assignment1')"><a><b style="font-size:12pt">Assignment 1</b></a></li>
+        <li>
+          <ul id="assignment1">
+            <li id='queA1' onclick="trackElement( 'queA1')"><a href="#">Question 1</a></li>
+            <li id='queA2' onclick="trackElement( 'queA2')"><a href="#">Question 3</a></li>
+            <li id='queA3' onclick="trackElement( 'queA3')"><a href="#">Question 2</a></li>
+            <li id='queA4' onclick="trackElement( 'queA4')"><a href="#">Question 4</a></li>
+            <li id='queA5' onclick="trackElement( 'queA5')"><a href="#">Question 5</a></li>
+            <li id='queA6' onclick="trackElement( 'queA6')"><a href="#">Question 6</a></li>
+            <li id='queA7' onclick="trackElement( 'queA7')"><a href="#">Question 7</a></li>
+            <li id='queA8' onclick="trackElement('queA8')"><a href="#">Question 8</a></li>
+            <li id='queA9' onclick="trackElement('queA9')"><a href="#">Question 9</a></li>
+            <li id='queA10' onclick="trackElement('queA10')"><a href="#">Question 10</a></li>
+          </ul>
+        </li>
+        <li onclick="show_hide('assignment2')"><a><b style="font-size:12pt">Assignment 2</b></a></li>
+        <li>
+          <ul id="assignment2">
+              <li id='queB1' onclick="trackElement( 'queB1')"><a href="#">Question 1</a></li>
+              <li id='queB2' onclick="trackElement( 'queB2')"><a href="#">Question 3</a></li>
+              <li id='queB3' onclick="trackElement( 'queB3')"><a href="#">Question 2</a></li>
+              <li id='queB4' onclick="trackElement( 'queB4')"><a href="#">Question 4</a></li>
+              <li id='queB5' onclick="trackElement( 'queb5')"><a href="#">Question 5</a></li>
+          </ul>
+        </li>
+        <li onclick="show_hide('assignment3')"><a><b style="font-size:12pt">Assignment 3</b></a>
+
+
+
+      </ul>
+    </nav>
+    <article id="content">
+      <div id="q1">CONTENT 1
+      <div class="box" id="box1">
+          <div class="headbar">
+            <a onclick="runcode('result1')">RUN</a>
+            <a onclick="changeView('box1')">Change View</a>
+          
+          </div>
+          <div class="editor" id="edit1">
+            <div class='code' id="code1"></div>
+            <iframe class="result" id="result1">result here</iframe>
+          </div>
+        </div>
       </div>
-    <script src="js.js"></script>
-  </body>
+      <br><br><br><br><br><br><br><br><br>
+      <div id="q2">content right here2</div>
+      <br><br><br><br><br><br><br><br><br>
+      <div id="q3">content right here3</div>
+      <br><br><br><br><br><br><br><br><br>
+      <div id="q4">content right here4</div>
+      <br><br><br><br><br><br><br><br><br>
+      <div id="q5">content right here5</div>
+      <br><br><br><br><br><br><br><br><br>
+
+    </article>
+  </div>
+
+<div id="bg-modal"></div>
+
+  <script src="js.js"></script>
+</body>
+
 </html>
