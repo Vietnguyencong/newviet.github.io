@@ -65,7 +65,7 @@ var viewChanged= true;
 function changeView(id){
   if (viewChanged==true){
     document.getElementById(id).style.width="110%"
-    document.getElementById(id).style.height="500px"
+    document.getElementById(id).style.height="380px"
     document.getElementById(id).style.transform="translateX(-50px)"
     document.getElementById("bg-modal").style.display="block"
 
