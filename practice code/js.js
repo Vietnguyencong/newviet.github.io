@@ -1,42 +1,137 @@
 
 
-//set up the editor
-function set_up_editor(EDITOR) {
 
-    window.editor = ace.edit(EDITOR);
+editor1 = ace.edit("code1");// set up editor 1
+pre_string1=`
+<form name="first_form">
+  <textarea name="first_text">
+    this is the value of the textarea
+  </textarea><br>
+  <input type="button" value="retrieve value"  onclick="yourfunction()">
+</form> 
+<div id="demo"></div>
+
+<script>
+function yourfunction(){
+    value=document.first_form.first_text.value
+    document.getElementById("demo").innerHTML=value
+}
+</script>`
+set_up_editor(editor1,pre_string1)
+runcode(editor1,'result1')
+
+
+editor2 = ace.edit("code2");// set up editor 2
+pre_string2=`
+<div>old string: this is a string </div>
+<div id='demo'>result</div>
+
+
+<script>
+//replace 'string' in mystring variable to 'javascript'
+var mystring='this is a string'
+var res=mystring.replace('string','javascript')
+document.getElementById('demo').innerHTML='new string: '+ res
+</script>`
+set_up_editor(editor2,pre_string2)
+
+
+editor3= ace.edit("code3"); // set up editor 3
+pre_string3=`<div>javascript is not fun at all</div>
+<div id='demo'>result</div>
+<script>
+//replace all the 'a' characters by an empty string
+    var mystring='javascript is not fun at all'
+    //repeat the loop until 'a' is not found in the string
+    while(mystring.indexOf('a')>-1){
+        mystring=mystring.replace('a','')
+    }
+    document.getElementById('demo').innerHTML=mystring 
+</script>`
+set_up_editor(editor3,pre_string3);
+
+editor4= ace.edit("code4"); // set up editor 4
+pre_string4=`<div>javascript is not fun at all</div>
+<div id='demo'>result</div>
+<div id='length'></div>
+<script>
+//split each words in the string
+    var mystring='javascript is not fun at all'
+    var res=mystring.split(" ")
+    document.getElementById('demo').innerHTML=res;
+    document.getElementById('length').innerHTML='legnth: '+res.length;
+</script>`
+set_up_editor(editor4,pre_string4);
+
+
+
+//set up the html editor function
+function set_up_editor(editor,pre_string) {
+
     editor.setTheme("ace/theme/twilight");
-    editor.getSession().setMode("ace/mode/html");
-    editor.setValue(`<html>
-    <body>
-        
-    </body>
-</html>`)
-    editor.focus();
+    editor.getSession().setMode(`ace/mode/html`);
+    editor.setValue(pre_string)
+    // editor.setFontSize("18px");
+    // editor.setOption('fontSize',"20px")
+
+    // editor.focus();
+    editor.resize();
     editor.setOptions({
       fontSize: "10pt",
       fontFamily: "Menlo, Monaco, Consolas, 'Courier New', monospace",
-      showLineNumbers: true,
-      showGutter: true,
+      showLineNumbers: false,
+      showGutter: false,
       vScrollBarAlwaysVisible:false,
-      enableBasicAutocompletion: true, enableLiveAutocompletion: true,
-      enableSnippets: true
-    });
-  
-    editor.setShowPrintMargin(true);
-    editor.setBehavioursEnabled(true);
-    
-}
+      hScrollBarAlwaysVisible: false,
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true,
+      enableSnippets: true,
+      animatedScroll: true,
 
-// run the code inside the small editor
-function runcode(result) {
+    });
+    // editor.setShowPrintMargin(true);
+     editor.setBehavioursEnabled(true);
+
+
+}
+//set up js editor
+function set_up_jseditor(editor,pre_string) {
+
+  editor.setTheme("ace/theme/twilight");
+  editor.getSession().setMode(`ace/mode/javascript`);
+  editor.setValue(pre_string)
+  // editor.setFontSize("18px");
+  // editor.setOption('fontSize',"20px")
+
+  // editor.focus();
+  editor.resize();
+  editor.setOptions({
+    fontSize: "10pt",
+    fontFamily: "Menlo, Monaco, Consolas, 'Courier New', monospace",
+    showLineNumbers: false,
+    showGutter: false,
+    vScrollBarAlwaysVisible:false,
+    hScrollBarAlwaysVisible: false,
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true,
+    enableSnippets: true,
+    animatedScroll: true,
+
+  });
+  // editor.setShowPrintMargin(true);
+  // editor.setBehavioursEnabled(true);
+
+
+}
+// run the code inside the small editor function
+function runcode(editor,result) {
 	var idoc = document.getElementById(result).contentWindow.document;
     idoc.open();
     code = editor.getValue();
     idoc.write(code);
     idoc.close();
 }
-set_up_editor("code1");
-runcode("result1")
+
 
 
 // show or hide function
@@ -67,6 +162,7 @@ function changeView(id){
     document.getElementById(id).style.width="110%"
     document.getElementById(id).style.height="380px"
     document.getElementById(id).style.transform="translateX(-50px)"
+    // document.getElementById(id).style.position="fixed"
     document.getElementById("bg-modal").style.display="block"
 
     viewChanged=false
@@ -75,8 +171,20 @@ function changeView(id){
     document.getElementById(id).style.width="80%"
     document.getElementById(id).style.height="350px"
     document.getElementById(id).style.transform="translateX(0)"
+    // document.getElementById(id).style.position=""
     document.getElementById("bg-modal").style.display="none"
     
     viewChanged=true
   }
 }
+
+//move to a diffent article session
+function changeArticle(artID){
+    articleList=document.getElementsByTagName("article")
+    for (i=0;i<articleList.length;i++){
+        articleList[i].style.display="none"
+    }
+    document.getElementById(artID).style.display="block"
+}
+
+

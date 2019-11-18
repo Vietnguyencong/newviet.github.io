@@ -13,7 +13,7 @@ header{
     COLOR:BLACK;
     FONT-FAMILY: monospace;
     width: 100%;
-    z-index: 99;
+    z-index: 1000;
 }
 
 header ul{
@@ -29,6 +29,24 @@ header ul li{
     padding-top: 10px;
     padding-bottom:10px
     
+}
+/* extra navigation */
+header ul li ul{
+    border-radius: 100px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(-60px);
+    
+}
+header ul li ul:hover{
+    color: black;
+}
+header ul li ul li{
+    background-color: #f0932b;
+}
+header ul li ul li a {
+    color: black;
 }
 #namepage{
     position:absolute;
@@ -68,7 +86,7 @@ header ul li:hover a {
 #container nav{
     position: relative;
     top: 70px;
-    width: 15%
+    width: 20%
 }
 
 #container nav ul li{
@@ -89,7 +107,7 @@ header ul li:hover a {
     text-decoration: none;   
 }
 #container nav ul li ul{
-    display: none;
+    display: block;
     position: relative;
     transform: translateX(-40px);
 }
@@ -107,25 +125,38 @@ header ul li:hover a {
 
 
 /* article part */
-#container article{
+article{
+    font-size: 11pt;
+}
+ #container article{
     position: relative;
-    top: 70px;
-    width:70%
+    top: 70px; 
+    width:70%;
+}
+#article1{
+    display: block;
+
+}
+#article2{
+    display: none;
+}
+#article3{
+    display: none;
+}
+#htmlArticle{
+    display:none
 }
 
-
-
-
 /* small editor */
-#bg-modal{
-    display:none;
+ #bg-modal{   /*leavethis one as id instead of class */
+    display:none ;
     position: absolute;
     top:0; left:0;
     width: 100%;
     height: 1000%;
     background-color: black;
     opacity: 0.6;
-    z-index: -100;
+    z-index: -1   ;
 }
 .box{
     position: relative; 
@@ -151,7 +182,7 @@ header ul li:hover a {
     width: 60%;
 }
 .editor iframe{
-    width:40%;
+    
     height: 100%;
     border: none;
     z-index:99;
@@ -174,3 +205,24 @@ header ul li:hover a {
  .headbar a:hover{
      background: #badc58;
  }
+
+
+
+ /* others */
+ code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: monospace;
+    padding: 0 3px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* mini editor */
+.mini-editor{
+    width: 100%;
+    min-height: 90px;
+}
+i{
+    font-weight: bold;
+}

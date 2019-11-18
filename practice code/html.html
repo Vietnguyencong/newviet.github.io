@@ -2,94 +2,291 @@
 <html lang="en">
 
 <head>
-  <title>Practice Code</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Practice Code</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+<!-- Bootstrap CSS -->
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
 
 
 </head>
 
 <body>
-  <header>
-    <ul>
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../liveEditor/liveEditor.html">Live Editor</a></li>
-      <li><a href="#">Relax</a></li>
-      <li id="namepage"><a href=""></a><b>Practice Code</b></a></li>
+<header>
+<ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../liveEditor/liveEditor.html">Live Editor</a></li>
+    <li><a href="#">Relax</a></li>
+    <!-- <li><a title="u should know these before your first test"href="#">HTML</a></li> -->
+    <!-- <li onclick="show_hide('assignmentList')">
+<a href="#">Assignments</a>
+<ul id="assignmentList">
+    <li><a href="#">Assignment 1</a></li>
+    <li>Assignment 2</li>
+    <li>Assignment 3</li>
+</ul>
+</li>
+<li onclick= "show_hide('examList')" >
+<a href="#">Exams</a>
+<ul id="examList">
+    <li>Exam 1</li>
+    <li>Exam 2</li>
+</ul>
+</li> -->
 
-    </ul>
-  </header>
-  <div id="container">
-    <nav id="sidebar">
-      <ul>
-        <li onclick="show_hide('assignment1')"><a><b style="font-size:12pt">Assignment 1</b></a></li>
+    <li id="namepage"><a href=""></a><b>Practice Code</b></a></li>
+
+</ul>
+</header>
+<div id="container">
+<nav id="sidebar">
+    <ul>
+        <li onclick="changeArticle('htmlArticle')"><a title="know it before your tests"><b
+                    style="font-size:12pt">HTML</b></a></li>
+        <li onclick="changeArticle('article1');show_hide('assignment1');"><a><b
+                    style="font-size:12pt">Assignment
+                    1</b></a></li>
         <li>
-          <ul id="assignment1">
-            <li id='queA1' onclick="trackElement( 'queA1')"><a href="#">Question 1</a></li>
-            <li id='queA2' onclick="trackElement( 'queA2')"><a href="#">Question 3</a></li>
-            <li id='queA3' onclick="trackElement( 'queA3')"><a href="#">Question 2</a></li>
-            <li id='queA4' onclick="trackElement( 'queA4')"><a href="#">Question 4</a></li>
-            <li id='queA5' onclick="trackElement( 'queA5')"><a href="#">Question 5</a></li>
-            <li id='queA6' onclick="trackElement( 'queA6')"><a href="#">Question 6</a></li>
-            <li id='queA7' onclick="trackElement( 'queA7')"><a href="#">Question 7</a></li>
-            <li id='queA8' onclick="trackElement('queA8')"><a href="#">Question 8</a></li>
-            <li id='queA9' onclick="trackElement('queA9')"><a href="#">Question 9</a></li>
-            <li id='queA10' onclick="trackElement('queA10')"><a href="#">Question 10</a></li>
-          </ul>
+            <ul id="assignment1">
+                <li id='queA1' onclick="trackElement('queA1')"><a href="#">Question 1</a></li>
+                <li id='queA2' onclick="trackElement('queA2')"><a href="#">Question 3</a></li>
+                <li id='queA3' onclick="trackElement('queA3')"><a href="#">Question 2</a></li>
+                <li id='queA4' onclick="trackElement('queA4')"><a href="#">Question 4</a></li>
+                <li id='queA5' onclick="trackElement('queA5')"><a href="#">Question 5</a></li>
+                <li id='queA6' onclick="trackElement('queA6')"><a href="#">Question 6</a></li>
+                <li id='queA7' onclick="trackElement('queA7')"><a href="#">Question 7</a></li>
+                <li id='queA8' onclick="trackElement('queA8')"><a href="#">Question 8</a></li>
+                <li id='queA9' onclick="trackElement('queA9')"><a href="#">Question 9</a></li>
+                <li id='queA10' onclick="trackElement('queA10')"><a href="#">Question 10</a></li>
+            </ul>
         </li>
-        <li onclick="show_hide('assignment2')"><a><b style="font-size:12pt">Assignment 2</b></a></li>
+        <li onclick="show_hide('assignment2');changeArticle('article2')"><a><b style="font-size:12pt">Assignment
+                    2</b></a></li>
         <li>
-          <ul id="assignment2">
-              <li id='queB1' onclick="trackElement( 'queB1')"><a href="#">Question 1</a></li>
-              <li id='queB2' onclick="trackElement( 'queB2')"><a href="#">Question 3</a></li>
-              <li id='queB3' onclick="trackElement( 'queB3')"><a href="#">Question 2</a></li>
-              <li id='queB4' onclick="trackElement( 'queB4')"><a href="#">Question 4</a></li>
-              <li id='queB5' onclick="trackElement( 'quebB5')"><a href="#">Question 5</a></li>
-          </ul>
+            <ul id="assignment2">
+                <li id='queB1' onclick="trackElement('queB1')"><a href="#">Question 1</a></li>
+                <li id='queB2' onclick="trackElement('queB2')"><a href="#">Question 3</a></li>
+                <li id='queB3' onclick="trackElement('queB3')"><a href="#">Question 2</a></li>
+                <li id='queB4' onclick="trackElement('queB4')"><a href="#">Question 4</a></li>
+                <li id='queB5' onclick="trackElement('queB5')"><a href="#">Question 5</a></li>
+            </ul>
         </li>
         <li onclick="show_hide('assignment3')"><a><b style="font-size:12pt">Assignment 3</b></a>
 
 
 
-      </ul>
-    </nav>
-    <article id="content">
-      <div id="q1">CONTENT 1
-      <div class="box" id="box1">
-          <div class="headbar">
-            <a onclick="runcode('result1')">RUN</a>
-            <a onclick="changeView('box1')">Change View</a>
-          
-          </div>
-          <div class="editor" id="edit1">
-            <div class='code' id="code1"></div>
-            <iframe class="result" id="result1">result here</iframe>
-          </div>
-        </div>
-      </div>
-      <br><br><br><br><br><br><br><br><br>
-      <div id="q2">content right here2</div>
-      <br><br><br><br><br><br><br><br><br>
-      <div id="q3">content right here3</div>
-      <br><br><br><br><br><br><br><br><br>
-      <div id="q4">content right here4</div>
-      <br><br><br><br><br><br><br><br><br>
-      <div id="q5">content right here5</div>
-      <br><br><br><br><br><br><br><br><br>
+    </ul>
+</nav>
 
-    </article>
-  </div>
+
+<!-- html article -->
+<article id="htmlArticle">
+    <div><b>This page is especially designed to pass TP only.</b><br> One of the very first steps that you
+        need to take is to understand the basics of HTML and JAVASCRIPT.
+        There are a lot of good stuffs online that can help you that. Thus there is no need for me to rewrite
+        those.
+        Instead, I have personally selected some good sources which I think are the most relavant to the TP
+        course.
+        It is a not hard class but will cost you a while to practice, so by filtering out what you need to study
+        will
+        save you time.
+        These provided Links below are in order from very foundational to foundational level. It is good to take
+        a look
+        of the Links before you want to do any further practice for Assignments and Exams.
+        Even though the materials is not comprehensive to master the coding langauge but trust me, it is all you
+        need to
+        know to be able to do first TP Assignment.
+    </div>
+    <br>
+    <div style="display: flex; justify-content: center">
+
+        <ul>HTML TAGS:
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_basic.asp">HTML Basic Examples</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_elements.asp">Nested Elements</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_comments.asp"> Comment</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_links.asp"> Link</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_images.asp">Image</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_images.asp">Tables(Important)</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_classes.asp">Class</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_id.asp">ID</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_forms.asp">Form</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_form_elements.asp">Form
+                    Elements</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/html_scripts.asp">Js in HTML</a></li>
+
+        </ul>
+
+        <ul>JAVASCRIPT:
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_whereto.asp">Introduction</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_output.asp">Output</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_comments.asp">Comments</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_variables.asp">Variables</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">Function(Important)</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_events.asp">Events</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_string_methods.asp">Strings
+                    Methods(Important)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_arrays.asp">Arrays(Important)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_array_methods.asp">Arrays
+                    Methods(Important)</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_switch.asp">Switch</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_for.aspp">Loop
+                    (For)(Important)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_while.asp">Loop
+                    (while)(Important)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_scope.asp">Scope)</a></li>
+        </ul>
+
+
+        <ul>If interested (do not recommended):
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_this.asp">This</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_debugging.asp">Debugging</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_objects.asp">Objects</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_arrow_function.asp">Arrow Function</a>
+            </li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_classes.asp">Class</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_es6.asp">New Version ES6</a></li>
+        </ul>
+    </div>
+
+</article>
+<!-- article 1 -->
+<article id="article1">
+
+    <div id="q0">
+        <p style="font-size: 8pt;text-align:right">Note: This materials is for instructional purpose only!</p>
+
+        <h1>Pre_question</h1>
+
+        <h5>Retrieve the value from the textbox in a form</h5>
+
+        <i>Syntax: </i><code>var textvalue=document.form_name.textbox_name.value</code><br>
+        <code>document</code> represents the whole content of the website<br>
+        <code>form</code> contains the <code>textbox</code>
+
+
+
+        <br>
+        <!-- editor 1 -->
+        <div class="box" id="box1">
+            <div class="headbar">
+                <a onclick="runcode(editor1,'result1')">RUN</a>
+                <a onclick="changeView('box1')">Change View</a>
+
+            </div>
+            <div class="editor" id="edit1">
+                <div class='code' id="code1"></div>
+                <iframe class="result" id="result1">result here</iframe>
+            </div>
+        </div>
+        <!-- editor 1 -->
+        <br>
+        <h5>Replace substring in a string </h5>
+        <p>There is a ton of ways to do the replacement in the string. <code>replace()</code> method is one of
+            them<br>
+            <i>Syntax: </i><code>var newstring=string.replace(searchvalue, newvalue)</code>
+            <!-- editor 2 -->
+            <div class="box" id="box2">
+                <div class="headbar">
+                    <a onclick="runcode(editor2,'result2')">RUN</a>
+                    <a onclick="changeView('box2')">Change View</a>
+
+                </div>
+                <div class="editor" id="edit2">
+                    <div class='code' id="code2"></div>
+                    <iframe class="result" id="result2">result here</iframe>
+                </div>
+            </div>
+            <!-- editor 2 -->
+            <br>
+
+            <h5>Remove substring in a string </h5>
+            Simply change the newvalue in the syntax above into empty string <code>""</code><br>
+            <i>Syntax: </i><code>var newstring=string.replace(searchvalue, "")</code>
+            <i>note:</i> only replace the first <code>searchvalue</code> founded in the string<br>
+            <br>
+            <h5>Find substring in a string </h5>
+            <p>Use the <code>indexOf()</code> method to return a the number which represents the postition of
+                the substring in the main string<br>
+                <i>Syntax: </i><code>string.indexOf()=a_number</code><br>
+                Return <code>-1</code> when the substring is not found(see the example below)<br>
+                we can use this property to repeat <code>replace()</code> method until we finish replacing all
+                the substrings in the main string</p>
+
+            <h5>Remove <b>all</b> substrings in a string </h5>
+            <p>Use <code>while loop</code> to repeat the <code>replace()</code> method muptiple times<br>
+                <i>Syntax: </i><code>while(boolean condition){some_code}</code></p>
+            <div class="box" id="box3">
+                <div class="headbar">
+                    <a onclick="runcode(editor3,'result3')">RUN</a>
+                    <a onclick="changeView('box3')">Change View</a>
+
+                </div>
+                <div class="editor" id="edit3">
+                    <div class='code' id="code3"></div>
+                    <iframe class="result" id="result3">result here</iframe>
+                </div>
+            </div>
+    </div>
+    <br>
+
+    <div id="q1">
+        <h1>Question 1</h1>
+        
+        <p>Use <code>split()</code> method to return an array of substrings<br>
+        
+        <i>Syntax:</i><code>string.split(separator)</code><br>
+        <b>Tip: </b>use empty string <code>''</code> to split each character in the string</p>
+        <p>Use <code>string.length</code> or <code>array.length</code> to return the length (number) of the array or string</p>
+        <div class="box" id="box4">
+                <div class="headbar">
+                    <a onclick="runcode(editor4,'result4')">RUN</a>
+                    <a onclick="changeView('box4')">Change View</a>
+        
+                </div>
+                <div class="editor" id="edit4">
+                    <div class='code' id="code4"></div>
+                    <iframe class="result" id="result4">result here</iframe>
+                </div>
+            </div>
+       
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="q3">content right here3</div>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="q4">content right here4</div>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="q5">content right here5</div>
+    <br><br><br><br><br><br><br><br><br>
+
+</article>
+
+
+<!-- article 2 -->
+<article id="article2">
+
+</article>
+
+<!-- article 3 -->
+<article id="article3">
+    
+</article>
+
+
+</div>
 
 <div id="bg-modal"></div>
 
-  <script src="js.js"></script>
+<script src="js.js"></script>
 </body>
 
 </html>
