@@ -59,12 +59,34 @@ pre_string4=`<div>javascript is not fun at all</div>
     var mystring='javascript is not fun at all'
     var res=mystring.split(" ")
     document.getElementById('demo').innerHTML=res;
-    document.getElementById('length').innerHTML='legnth: '+res.length;
+    document.getElementById('length').innerHTML='legnth: '+
+    res.length;
 </script>`
 set_up_editor(editor4,pre_string4);
 
+editor5= ace.edit("code5"); // set up editor 5 (fix 5 cai)
+pre_string5=`
+<div id='first_ele'>first ele</div>
+<div id='last_ele'>last ele</div>
+<script>
+//split each words in the string
+    var myArray=['viet','dep','trai']
+    document.getElementById('first_ele').innerHTML=myArray[0];
+    document.getElementById('last_ele').innerHTML= myArray[myArray.length-1];
+</script>`
+set_up_editor(editor5,pre_string5);
 
-
+editor6= ace.edit("code6"); // set up editor 6 (fix 5 cai)
+pre_string6=`
+<div id='first_ele'>first ele</div>
+<div id='last_ele'>last ele</div>
+<script>
+//split each words in the string
+    var myArray=['viet','dep','trai']
+    document.getElementById('first_ele').innerHTML=myArray[0];
+    document.getElementById('last_ele').innerHTML= myArray[myArray.length-1];
+</script>`
+set_up_editor(editor6,pre_string6);
 //set up the html editor function
 function set_up_editor(editor,pre_string) {
 

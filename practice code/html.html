@@ -241,12 +241,12 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     <div id="q1">
         <h1>Question 1</h1>
-        
-        <p>Use <code>split()</code> method to return an array of substrings<br>
+        <p><b>Logic: </b>split the string into words use <code>split()</code> method then caculate the length using the <code>string.legnth</code> property</p>
+        <p><code>split()</code> returns an array of substrings<br>
         
         <i>Syntax:</i><code>string.split(separator)</code><br>
-        <b>Tip: </b>use empty string <code>''</code> to split each character in the string</p>
-        <p>Use <code>string.length</code> or <code>array.length</code> to return the length (number) of the array or string</p>
+        <b>Tip: </b>use empty string <code>''</code> if you want to split each character in the string</p>
+        <p> <code>string.length</code> or <code>array.length</code> return the length (number) of the array or string</p>
         <div class="box" id="box4">
                 <div class="headbar">
                     <a onclick="runcode(editor4,'result4')">RUN</a>
@@ -260,10 +260,43 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
             </div>
        
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    <div id="q3">content right here3</div>
-    <br><br><br><br><br><br><br><br><br>
-    <div id="q4">content right here4</div>
+    <br>
+    <div id="q2">
+        <h1>Question 2</h1>
+        <p><b>Logic:</b>split the string into words. Position of first element and the last element in an array are perspectively <code>0</code> and <code>array.legnth-1</code> </p>
+        <p>First element: <code>array[0]</code> <br> Last element: <code>array[array.length-1]</code></p>
+        <!-- editor 5 -->
+        <div class="box" id="box5"> 
+            <div class="headbar">
+                <a onclick="runcode(editor5,'result5')">RUN</a>
+                <a onclick="changeView('box5')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit5">
+                <div class='code' id="code5"></div>
+                <iframe class="result" id="result5">result here</iframe>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="q3">
+        <h1>Question 3</h1>
+        <p><b>Logic:</b> Use the array of words created in previous quesition <br>
+            Make a for loop to repeat <code>replace()</code> method until finishing removing all the breaking lines <code>\n</code></p>
+        <p><i>Syntax:</i> <code>for(condition){code}</code></p>
+        <!-- editor 6 -->
+        <div class="box" id="box6"> 
+            <div class="headbar">
+                <a onclick="runcode(editor5,'result6')">RUN</a>
+                <a onclick="changeView('box6')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit6">
+                <div class='code' id="code6"></div>
+                <iframe class="result" id="result6">result here</iframe>
+            </div>
+        </div>
+    </div>
     <br><br><br><br><br><br><br><br><br>
     <div id="q5">content right here5</div>
     <br><br><br><br><br><br><br><br><br>
