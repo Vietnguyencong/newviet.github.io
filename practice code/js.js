@@ -76,17 +76,82 @@ pre_string5=`
 </script>`
 set_up_editor(editor5,pre_string5);
 
-editor6= ace.edit("code6"); // set up editor 6 (fix 5 cai)
-pre_string6=`
-<div id='first_ele'>first ele</div>
-<div id='last_ele'>last ele</div>
+// editor6= ace.edit("code6"); // set up editor 6 (fix 5 cai)
+// pre_string6=`
+// <!--this one is easy, you can do it-->`
+// set_up_editor(editor6,pre_string6);
+
+editor7= ace.edit("code7"); // set up editor 7 (fix 5 cai)
+pre_string7=`<div id='demo'>original string</div></div>
+<div id='demo0'>upper case string</div>
+<div id='demo1'>lower case string</div>
 <script>
-//split each words in the string
-    var myArray=['viet','dep','trai']
-    document.getElementById('first_ele').innerHTML=myArray[0];
-    document.getElementById('last_ele').innerHTML= myArray[myArray.length-1];
+    var mystring='Viet NGUYEN CongdePtrai'
+    var UpString=mystring.toUpperCase()
+    var LowString=mystring.toLowerCase()
+    demo.innerHTML=mystring
+    demo0.innerHTML=UpString
+    demo1.innerHTML=LowString
 </script>`
-set_up_editor(editor6,pre_string6);
+set_up_editor(editor7,pre_string7);
+
+editor8= ace.edit("code8"); // set up editor 8 (fix 5 cai)
+pre_string8=`<div id='demo'></div>
+<div id='demo0'></div>
+<script>
+    var mystring='how many times "f","i" appear in beg?'
+    var arr_of_char=mystring.split('')
+    var newarray=[0,0]
+    for(i=0;i<arr_of_char.length;i++){
+        //if the element is 'f' then increase newarray[0] by 1
+        if(arr_of_char[i]=='f')  newarray[0]++
+        //if the element is 'i' then increase newarray[1] by 1
+        if(arr_of_char[i]=='i')  newarray[1]++
+    }
+    demo.innerHTML=mystring
+    demo0.innerHTML=newarray
+</script>`
+set_up_editor(editor8,pre_string8);
+
+editor9= ace.edit("code9"); // set up editor 9 (fix 6 cai)
+pre_string9=`<div id='demo'></div>
+<div id='demo0'></div>
+<script>
+    var mystring='record the occurences "e" in beg '
+    var arr_of_char=mystring.split('')
+    var newarray=[] //contain the occurences of 'a'
+    for(i=0;i<arr_of_char.length;i++){
+        //if the element is 'e' then push i into the newarray
+        if(arr_of_char[i]=='e') {
+            newarray.push(i)
+        }
+    }
+    demo.innerHTML=mystring
+    demo0.innerHTML=newarray
+</script>`
+set_up_editor(editor9,pre_string9);
+
+editor10= ace.edit("code10"); // set up editor 10 (fix 6 cai)
+pre_string10=`<div id='demo'></div>
+<div id='demo0'></div>
+<script>
+    var mystring='record the occurences "e" in beg '
+    var arr_of_char=mystring.split('')
+    var newarray=[] //contain the occurences of 'a'
+    for(i=0;i<arr_of_char.length;i++){
+        //if the element is 'e' then push i into the newarray
+        if(arr_of_char[i]==' ') {
+        newarray.push(i+1)// (i+1) is the position of the words
+        }
+    }
+    demo.innerHTML=mystring
+    demo0.innerHTML=newarray
+</script>`
+set_up_editor(editor10,pre_string10);
+
+
+
+
 //set up the html editor function
 function set_up_editor(editor,pre_string) {
 
@@ -98,6 +163,7 @@ function set_up_editor(editor,pre_string) {
 
     // editor.focus();
     editor.resize();
+    editor.focus()
     editor.setOptions({
       fontSize: "10pt",
       fontFamily: "Menlo, Monaco, Consolas, 'Courier New', monospace",
@@ -181,18 +247,22 @@ function trackElement(id){
 var viewChanged= true;
 function changeView(id){
   if (viewChanged==true){
-    document.getElementById(id).style.width="110%"
+    document.getElementById(id).style.zIndex="1000"
+    document.getElementById(id).style.width="120%"
     document.getElementById(id).style.height="380px"
-    document.getElementById(id).style.transform="translateX(-50px)"
+    document.getElementById(id).style.transform="translateX(-60px)"
+    document.getElementById(id).style.zIndex="1000"
     // document.getElementById(id).style.position="fixed"
     document.getElementById("bg-modal").style.display="block"
 
     viewChanged=false
   }
   else {// turn back into the normal stage
-    document.getElementById(id).style.width="80%"
-    document.getElementById(id).style.height="350px"
+    document.getElementById(id).style.width="90%"
+    document.getElementById(id).style.height="270px"
     document.getElementById(id).style.transform="translateX(0)"
+    document.getElementById(id).style.zIndex="998"
+
     // document.getElementById(id).style.position=""
     document.getElementById("bg-modal").style.display="none"
     

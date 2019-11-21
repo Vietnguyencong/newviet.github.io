@@ -39,21 +39,40 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </ul>
 </li> -->
 
-    <li id="namepage"><a href=""></a><b>Practice Code</b></a></li>
+    <li id="namepage"><a href=""></a><b>Practice Code @viet! </b></a></li>
 
 </ul>
 </header>
 <div id="container">
 <nav id="sidebar">
-    <ul>
+    
+    <ul id='navul'>
         <li onclick="changeArticle('htmlArticle')"><a title="know it before your tests"><b
                     style="font-size:12pt">HTML</b></a></li>
         <li onclick="changeArticle('article1');show_hide('assignment1');"><a><b
-                    style="font-size:12pt">Assignment
-                    1</b></a></li>
+                    style="font-size:12pt">Assignment 1</b></a></li>
         <li>
             <ul id="assignment1">
                 <li id='queA1' onclick="trackElement('queA1')"><a href="#">Question 1</a></li>
+                <li id='queA2' onclick="trackElement('queA2')"><a href="#">Question 3</a></li>
+                <li id='queA3' onclick="trackElement('queA3')"><a href="#">Question 2</a></li>
+                <li id='queA4' onclick="trackElement('queA4')"><a href="#">Question 4</a></li>
+                <li id='queA5' onclick="trackElement('queA5')"><a href="#">Question 5</a></li>
+                <li id='queA6' onclick="trackElement('queA6')"><a href="#">Question 6</a></li>
+                <li id='queA7' onclick="trackElement('queA7')"><a href="#">Question 7</a></li>
+                <li id='queA8' onclick="trackElement('queA8')"><a href="#">Question 8</a></li>
+                <li id='queA9' onclick="trackElement('queA9')"><a href="#">Question 9</a></li>
+                <li id='queA10' onclick="trackElement('queA10')"><a href="#">Question 10</a></li>
+                <li id='queA1' onclick="trackElement('queA1')"><a href="#">Question 1</a></li>
+                <li id='queA2' onclick="trackElement('queA2')"><a href="#">Question 3</a></li>
+                <li id='queA3' onclick="trackElement('queA3')"><a href="#">Question 2</a></li>
+                <li id='queA4' onclick="trackElement('queA4')"><a href="#">Question 4</a></li>
+                <li id='queA5' onclick="trackElement('queA5')"><a href="#">Question 5</a></li>
+                <li id='queA6' onclick="trackElement('queA6')"><a href="#">Question 6</a></li>
+                <li id='queA7' onclick="trackElement('queA7')"><a href="#">Question 7</a></li>
+                <li id='queA8' onclick="trackElement('queA8')"><a href="#">Question 8</a></li>
+                <li id='queA9' onclick="trackElement('queA9')"><a href="#">Question 9</a></li>
+                <li id='queA10' onclick="trackElement('queA10')"><a href="#">Question 10</a></li><li id='queA1' onclick="trackElement('queA1')"><a href="#">Question 1</a></li>
                 <li id='queA2' onclick="trackElement('queA2')"><a href="#">Question 3</a></li>
                 <li id='queA3' onclick="trackElement('queA3')"><a href="#">Question 2</a></li>
                 <li id='queA4' onclick="trackElement('queA4')"><a href="#">Question 4</a></li>
@@ -81,6 +100,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 
     </ul>
+
 </nav>
 
 
@@ -163,7 +183,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <article id="article1">
 
     <div id="q0">
-        <p style="font-size: 8pt;text-align:right">Note: This materials is for instructional purpose only!</p>
+        <p style="font-size: 8pt;text-align:right">Note: This materials is for instructional purpose only! I won't provide the full answers because Dr. Parks won't allow so</p>
 
         <h1>Pre_question</h1>
 
@@ -241,12 +261,21 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     <div id="q1">
         <h1>Question 1</h1>
-        <p><b>Logic: </b>split the string into words use <code>split()</code> method then caculate the length using the <code>string.legnth</code> property</p>
-        <p><code>split()</code> returns an array of substrings<br>
-        
-        <i>Syntax:</i><code>string.split(separator)</code><br>
-        <b>Tip: </b>use empty string <code>''</code> if you want to split each character in the string</p>
-        <p> <code>string.length</code> or <code>array.length</code> return the length (number) of the array or string</p>
+        <p><b>How many words are the string named "beg"? (words not characters)
+              <br>Show the answer in the span block  with id = "ans1"</b></p>
+        <p><b>Solve: </b>split the string beg into words use <code>split()</code> method then caculate the length using the <code>string.legnth</code> property</p>
+            <table border='1'>
+                    <tr>
+                            <td><code>string.length</code></td>
+                            <td>return the total number of characters in the string</td>
+                    </tr>
+                    <tr>
+                            <td><code>split(" ")</code></td>
+                            <td>split the string by a blank space</td>
+                    </tr>
+                </table>
+                <br>
+        <b>Note: </b>use empty string <code>''</code> if you want to split each character in the string</p>
         <div class="box" id="box4">
                 <div class="headbar">
                     <a onclick="runcode(editor4,'result4')">RUN</a>
@@ -263,8 +292,28 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <br>
     <div id="q2">
         <h1>Question 2</h1>
-        <p><b>Logic:</b>split the string into words. Position of first element and the last element in an array are perspectively <code>0</code> and <code>array.legnth-1</code> </p>
-        <p>First element: <code>array[0]</code> <br> Last element: <code>array[array.length-1]</code></p>
+        <p><b>Store words in the string "beg" in an array.<br> Show the first and last elements of the array in the span block with id=ans2;</b></p>
+
+        <p><b>Solve:</b>split the string beg into words. Position of first element and the last element in an array are perspectively <code>0</code> and <code>array.legnth-1</code> </p>
+        <table border='1'>
+                <tr>
+                        <td><code>array.length</code></td>
+                        <td>length of the array</td>
+                </tr>
+                <tr>
+                        <td><code>array[0]</code></td>
+                        <td>first element</td>
+                </tr>
+                <tr>
+                        <td><code>array[array.length-1]</code></td>
+                        <td>Last element</td>
+                </tr>
+                
+            </table>
+            <br>
+            <p><b>Note: </b>the first element's postition in an array is <code>0</code>--> the last element position is <code>array.length-1</code>
+<br><b>Example: </b>length of the Array=[1,2,3] is <code>3</code>, the last element's postition is <code>2</code>> </p>
+            
         <!-- editor 5 -->
         <div class="box" id="box5"> 
             <div class="headbar">
@@ -279,15 +328,34 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         </div>
     </div>
     <br>
-    <div id="q3">
+    <!-- Question 3 -->
+    <div id="q3"> 
         <h1>Question 3</h1>
-        <p><b>Logic:</b> Use the array of words created in previous quesition <br>
-            Make a for loop to repeat <code>replace()</code> method until finishing removing all the breaking lines <code>\n</code></p>
-        <p><i>Syntax:</i> <code>for(condition){code}</code></p>
-        <!-- editor 6 -->
+        <p><b> Show each word in the array produced in (2) above on one line separated by commas
+               in the span block  with id="ans3"</b></p>
+        <p><b>Solve:</b> Use the array of words created in second quesition <br>
+            Make a for loop to go over each element of the array <br>
+            For each array element or single word that loop goes over, remove the breaking line signs <code>\n</code> if it has ones <br>
+            After the removing all the <code>\n</code> in the array, display the array in span block. It will be displayed in only 1 line</p>
+            <table border='1'>
+                <tr>
+                        <td style='text-align: center;'colspan="2"><code>for(i=0;i&ltstring.length;i++){somecode}</code></td>
+                        
+                </tr>
+                <tr>
+                        <td><code>i=0</code></td>
+                        <td><code>i</code> is the count varible</td>
+                </tr>
+                <tr>
+                        <td><code>i++</code></td>
+                        <td> after going over each element the count variable will increase by 1 unit   </td>
+                </tr>
+                <tr><td><code>i&ltstring.length</code></td><td>the loop will end when i = length of the string</td></tr>
+            </table><br>
+        <!-- editor 6
         <div class="box" id="box6"> 
             <div class="headbar">
-                <a onclick="runcode(editor5,'result6')">RUN</a>
+                <a onclick="runcode(editor6,'result6')">RUN</a>
                 <a onclick="changeView('box6')">Change View</a>
     
             </div>
@@ -295,12 +363,146 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
                 <div class='code' id="code6"></div>
                 <iframe class="result" id="result6">result here</iframe>
             </div>
+        </div> -->
+    </div>
+
+    <!-- question 4 -->
+    <div id="q4">
+        <h1>Question 4</h1>
+        <p><b>Create a new string using the value of "beg" where all the characters are capitalized<br>
+           Show the new string  in the span block  with id="ans4"</b></p>
+        <p><b>Solve:</b> use the <code>string.toUpperCase()</code> to capitalize alll the characters in beg</p>
+            <table border='1'>
+                <tr>
+                    <td><code>string.toUpperCase()</code></td>
+                    <td>uppercase the string</td>
+            </tr>   
+            <tr>
+                <td><code>string.toLowerCase()</code></td>
+                <td>LowerCase the string</td>
+            </tr>
+           
+            </table><br>
+        <!-- editor 7 -->
+        <div class="box" id="box7"> 
+            <div class="headbar">
+                <a onclick="runcode(editor7,'result7')">RUN</a>
+                <a onclick="changeView('box7')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit7">
+                <div class='code' id="code7"></div>
+                <iframe class="result" id="result7">result here</iframe>
+            </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    <div id="q5">content right here5</div>
-    <br><br><br><br><br><br><br><br><br>
+    
+    <!-- question 5 -->
+    <div id="q5">
+        <h1>Question 5</h1>
+        <p><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string "beg"
+         Show these 5 counts on one line separated by commas in the span block  with id="ans5"</b></p>
+        <p><b>Solve:</b><br>
+        (1) Lowercase all the characters in the string beg<br>
+    (2) <code>split('')</code> beg into each characters<br>
+        (3) create a new array with 5 child elements initilize by <code>0</code> conressponding with the count for 5 characters in the question<br>
+        (3) Make a loop go through each character in beg and check if it macth one of them "a", "e", "i", "o", "u" <br>
+        (5) if it macths one of them, then increment coressponding the child element in the new array by 1 </p>
+            <table border='1'>
+                <tr>
+                    <td><code>if(true/false){code}</code></td>
+                    <td>if the condition is true, excute the codes inside</td>
+            </tr>   
+            <tr>
+                <td><code>number++</code></td>
+                <td>equivalent to number = number + 1</td>
+            </tr>
+            <tr>
+                <td><code>number--</code></td>
+                <td>equivalent to number = number - 1</td>
+            </tr>
+            <tr>
+                <td><code>==</code></td>
+                <td>equivalent to equal sign in boolean condition</td>
+            </tr>
+            <tr>
+                <td><code>!=</code></td>
+                <td>equivalent to not-equal sign in boolean condition</td>
+            </tr>
+           
+            </table><br>
+        <!-- editor 8 -->
+        <div class="box" id="box8"> 
+            <div class="headbar">
+                <a onclick="runcode(editor8,'result8')">RUN</a>
+                <a onclick="changeView('box8')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit8">
+                <div class='code' id="code8"></div>
+                <iframe class="result" id="result8">result here</iframe>
+            </div>
+        </div>
+    </div>
 
+    <!-- question 6 -->
+    <div id="q6">
+        <h1>Question 6</h1>
+        <p><b> Show the location of each occurence of the character "e" in the string "beg"
+on one line separated by commas in the span block  with id="ans6"</b></p>
+        <p><b>Solve:</b><br>
+        (1) split the beg into chars <br>
+        (2) make a new array with no element to contain the occurences of 'e' in string beg <br>
+        (3) make a loop going over each char in beg and if the char equals 'e', then record the position of that element <br>
+        (3) push the recored position (should be a number) to the new array <br>
+        
+         </p>
+            <table border='1'>
+                <tr>
+                    <td><code>array.push(some_value)</code></td>
+                    <td>add an element at the <b>end</b> of array</td>
+            </tr>   
+    
+            </table><br>
+        <!-- editor 9 -->
+        <div class="box" id="box9"> 
+            <div class="headbar">
+                <a onclick="runcode(editor9,'result9')">RUN</a>
+                <a onclick="changeView('box9')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit9">
+                <div class='code' id="code9"></div>
+                <iframe class="result" id="result9">result here</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- question 7 -->
+    <div id="q7">
+        <h1>Question 7</h1>
+        <p><b>show the location where each word begins in the string named "beg" 
+      Show the answers on one line separated by commas in the span block  with id="ans7"</b></p>
+        <p><b>Solve:</b><br>
+        (1) the location of each word in beg is location of the blank space before it + <code>1</code><br>
+        (2) make a for loop go over each char in beg and check if it is blank space<br>
+        (3) if it is blank space, then <code>push</code> the position number into a new array<br>
+        (4) the answer will be similar to the answer for question 6
+ </p>
+
+        <!-- editor 10 -->
+        <div class="box" id="box10"> 
+            <div class="headbar">
+                <a onclick="runcode(editor10,'result10')">RUN</a>
+                <a onclick="changeView('box10')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit10">
+                <div class='code' id="code10"></div>
+                <iframe class="result" id="result10">result here</iframe>
+            </div>
+        </div>
+    </div>
 </article>
 
 
@@ -318,6 +520,10 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </div>
 
 <div id="bg-modal"></div>
+<div id='bottom'>
+    <div style="position: relative;;text-align:left;top: 220px;font-size: 8pt;padding-left: 20px;">vietnguyencong99@gmail.com</div>
+    <div style="position: relative;;text-align:right;top: 220px;font-size: 8pt;padding-right: 20px;">@viet!</div>
+</div>
 
 <script src="js.js"></script>
 </body>
