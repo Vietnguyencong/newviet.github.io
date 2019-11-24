@@ -135,11 +135,11 @@ editor10= ace.edit("code10"); // set up editor 10 (fix 6 cai)
 pre_string10=`<div id='demo'></div>
 <div id='demo0'></div>
 <script>
-    var mystring='record the occurences "e" in beg '
+    var mystring='record the position of words in beg '
     var arr_of_char=mystring.split('')
-    var newarray=[] //contain the occurences of 'a'
+    var newarray=[0] //the first word's positionn is at 0
     for(i=0;i<arr_of_char.length;i++){
-        //if the element is 'e' then push i into the newarray
+        //if the element is ' ' then push i+1 into the newarray
         if(arr_of_char[i]==' ') {
         newarray.push(i+1)// (i+1) is the position of the words
         }
@@ -247,11 +247,11 @@ function trackElement(id){
 var viewChanged= true;
 function changeView(id){
   if (viewChanged==true){
-    document.getElementById(id).style.zIndex="1000"
     document.getElementById(id).style.width="120%"
     document.getElementById(id).style.height="380px"
     document.getElementById(id).style.transform="translateX(-60px)"
     document.getElementById(id).style.zIndex="1000"
+    document.getElementById(id).children[0].children[1].text='Change into small view'
     // document.getElementById(id).style.position="fixed"
     document.getElementById("bg-modal").style.display="block"
 
@@ -262,6 +262,7 @@ function changeView(id){
     document.getElementById(id).style.height="270px"
     document.getElementById(id).style.transform="translateX(0)"
     document.getElementById(id).style.zIndex="998"
+    document.getElementById(id).children[0].children[1].text='Change View'
 
     // document.getElementById(id).style.position=""
     document.getElementById("bg-modal").style.display="none"
