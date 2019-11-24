@@ -29,7 +29,8 @@ header ul li{
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 10px;
-    padding-bottom:10px
+    padding-bottom:10px;
+    text-align: center;
     
 }
 /* extra navigation */
@@ -49,6 +50,7 @@ header ul li ul li{
 }
 header ul li ul li a {
     color: black;
+    
 }
 #namepage{
     position:absolute;
@@ -112,7 +114,7 @@ header ul li:hover a {
 #container nav ul li ul li{
     list-style: none;  
     /* text-align: center; */
-    padding-left: 00px;
+    padding-left: 18px;
 }
 #container nav ul li ul li a{
     text-decoration: none;   
