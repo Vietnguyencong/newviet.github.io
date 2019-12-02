@@ -45,7 +45,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </ul>
 </li> -->
 
-    <li id="namepage"><a href=""></a><b>Practice Code @viet! </b></a></li>
+    <li id="namepage"><a href=""></a><b>Practice Code &ltVIET> </b></a></li>
 
 </ul>
 </header>
@@ -268,7 +268,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     <div id="q1">
         <h1>Question 1</h1>
-        <p><b>How many words are the string named "beg"? (words not characters)
+        <p class='heading'><b>How many words are the string named "beg"? (words not characters)
               <br>Show the answer in the span block  with id = "ans1"</b></p>
         <p><b>Solve: </b>split the string beg into words use <code>split()</code> method then caculate the length using the <code>string.legnth</code> property</p>
             <table border='1'>
@@ -299,7 +299,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <br>
     <div id="q2">
         <h1>Question 2</h1>
-        <p><b>Store words in the string "beg" in an array.<br> Show the first and last elements of the array in the span block with id=ans2;</b></p>
+        <p class='heading'><b>Store words in the string "beg" in an array.<br> Show the first and last elements of the array in the span block with id=ans2;</b></p>
 
         <p><b>Solve:</b>split the string beg into words. Position of first element and the last element in an array are perspectively <code>0</code> and <code>array.legnth-1</code> </p>
         <table border='1'>
@@ -338,7 +338,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <!-- Question 3 -->
     <div id="q3"> 
         <h1>Question 3</h1>
-        <p><b> Show each word in the array produced in (2) above on one line separated by commas
+        <p class='heading'><b> Show each word in the array produced in (2) above on one line separated by commas
                in the span block  with id="ans3"</b></p>
         <p><b>Solve:</b> Use the array of words created in second quesition <br>
             Make a for loop to go over each element of the array <br>
@@ -376,7 +376,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <!-- question 4 -->
     <div id="q4">
         <h1>Question 4</h1>
-        <p><b>Create a new string using the value of "beg" where all the characters are capitalized<br>
+        <p class='heading'> <b>Create a new string using the value of "beg" where all the characters are capitalized<br>
            Show the new string  in the span block  with id="ans4"</b></p>
         <p><b>Solve:</b> use the <code>string.toUpperCase()</code> to capitalize alll the characters in beg</p>
             <table border='1'>
@@ -407,7 +407,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <!-- question 5 -->
     <div id="q5">
         <h1>Question 5</h1>
-        <p><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string "beg"
+        <p class='heading'><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string "beg"
          Show these 5 counts on one line separated by commas in the span block  with id="ans5"</b></p>
         <p><b>Solve:</b><br>
         (1) Lowercase all the characters in the string beg<br>
@@ -455,7 +455,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <!-- question 6 -->
     <div id="q6">
         <h1>Question 6</h1>
-        <p><b> Show the location of each occurence of the character "e" in the string "beg"
+        <p class='heading'><b> Show the location of each occurence of the character "e" in the string "beg"
 on one line separated by commas in the span block  with id="ans6"</b></p>
         <p><b>Solve:</b><br>
         (1) split the beg into chars <br>
@@ -488,7 +488,7 @@ on one line separated by commas in the span block  with id="ans6"</b></p>
     <!-- question 7 -->
     <div id="q7">
         <h1>Question 7</h1>
-        <p><b>show the location where each word begins in the string named "beg" 
+        <p class='heading'><b>Show the location where each word begins in the string named "beg" 
       Show the answers on one line separated by commas in the span block  with id="ans7"</b></p>
         <p><b>Solve:</b><br>
         (1) the location of each word in beg is location of the blank space before it + <code>1</code><br>
@@ -510,6 +510,263 @@ on one line separated by commas in the span block  with id="ans6"</b></p>
             </div>
         </div>
     </div>
+    <!--question 8-->
+    <div id="q8">
+        <h1>Question 8</h1>
+        <p class='heading'><b style="left: 0px;"> Place the words in the string "beg" in a table with a one pixel border,
+  with a gray backgound. Use only ten cells per row. Empty cells should contain
+      the word "null". Show the table in the span block with id="ans8"</b></p>
+        <p><b>Solve:</b><br>
+        (1) Make a requested table with 10 columns, 1px border, grey background <br>
+        (2) Make an outer loop go through each row of the table<br>
+        (3) With each row, make an inner loop with repeat 10 times to put 10 words of beg in 10 columns<br>
+        (3) Before putting the word in a cell, make an <code>if</code> statement to check if the word is empty, if empty then place <code>null</code> instead<br>
+        (4) The length of the outer loop will be contrainted by the length of the array of words beg/10 because number of rows will be the 
+        length of the outer loop and each row will have 10 words --> the total of words in beg/10 words in each row should be the length of the outer loop<br>
+        </p>
+       <p class='heading'><b>Note: </b> We can use <code>style</code> attribute of HTML tags to edit CSS properties rather than doing it from CSS file
+    </p>
+            <table border='1'>
+                <tr>
+                    <td><code>&ltdiv style='background:red; font-size:12pt;'></code> </td>
+                    <td>set background and font'size for the div element to red and 12pt</td>
+            </tr>   
+            <tr>
+                <td><code>&ltp style='color:black;'></code></td>
+                <td>set font's color and theme font for whatever inside <code>p</code> element  to black</td>
+            </tr>
+            <tr>
+                <td><code>&lttable border="integer"'></code></td>
+                <td>set border of the table to the integer, unit:px</td>
+            </tr>
+            <tr>
+                    <td><code>&lttable>&lt/table></code></td>
+                    <td>start a new table</td>
+                </tr>
+
+        
+            <tr>
+                    <td><code>&lttr>&lt/tr></code></td>
+                    <td>a new row in the table</td>
+                </tr>
+            <tr>
+                <td><code>&lttd>&lt/td></code></td>
+                <td>a new cell in the table</td>
+            </tr>
+        
+            </table><br>
+            <!-- editor 11 -->
+        <div class="box" id="box11"> 
+            <div class="headbar">
+                <a onclick="runcode(editor11,'result11')">RUN</a>
+                <a onclick="changeView('box11')">Change View</a>
+                <a onclick="editor11.resize()">Fit content</a>
+                
+    
+            </div>
+            <div class="editor" id="edit11">
+                <div class='code' id="code11"></div>
+                <iframe class="result" id="result11">result here</iframe>
+            </div>
+        </div>
+    </div> 
+        <!--question 9-->
+        <div id="q9">
+    <h1>Question 9</h1>
+    <p class='heading'><b>
+       Replace each occurence of the blank character in "beg" with the character "*"
+       show the result in the span block  with id="ans9"</b></p>
+    <p><b>Solve:</b><br>
+    (1) Make a <code>while</code> loop to track all the blank characters in beg<br>
+    (2) With each tracked element, replace it with '*'<br></p>
+        <table border='1'>
+            <tr>
+                <td><code>mystring.indexOf('substring')</code></td>
+                <td>The statement return <code>-1</code> if substring doesn't exist in the main string<br>
+                    otherwise return a integer which is the position of the substring </td>
+        </tr>   
+        <tr>
+            <td><code>mystring.indexOf('substring')>-1</code></td>
+            <td>If statement returns true if the substring is in the main string</td>
+        </tr>
+
+        </table><br>
+            <!--editor 12-->
+            <div class="box" id="box12"> 
+                <div class="headbar">
+                    <a onclick="runcode(editor12,'result12')">RUN</a>
+                    <a onclick="changeView('box12')">Change View</a>
+                    <a onclick="editor12.resize()">Fit content</a>
+                </div>
+                <div class="editor" id="edit12">
+                    <div class='code' id="code12"></div>
+                    <iframe class="result" id="result12">result here</iframe>
+                </div>
+            </div>
+</div>
+<!--question 10-->
+ <div id="q10">
+    <h1>Question 10</h1>
+    <p class='heading'><b> Sort the words in array created in (2) into alphabetical order
+ show the results in the span block with id="ans10" on a single line</b></p>
+    <p><b>Solve:</b><br>
+    (1) Make a <code>for</code> loop to <code>lowercase</code> each element in (2)<br>
+    (2) Use <code>sort()</code> method to sort in alphabetical order<br>
+ </p>
+        <table border='1'>
+            <tr>
+                <td><code>stirng_array.sort()</code></td>
+                <td>Sort in alphabetical order</td>
+        </tr>   
+
+        </table><br>
+
+</div>
+    <!--question 11-->
+<div id="q11">
+    <h1>Question 11</h1>
+    <p class='heading'><b>Show the ASCII character number of each character in the string "beg"
+ separate each value with a comma and place the result on a single line in the span block
+with id="ans11"</b></p>
+    <p><b>Solve:</b><br>
+    (1) <code>split('')</code> beg with an empty string to create an array of characters<br>
+    (2) Make a <code>for</code> loop going through each characters above, use <code>charCodeAt()</code> method 
+    to transfer the character into ACII number<br>
+    (3) <code>push()</code> the newly created number above to a new array<br>
+    </p>
+    
+    <p class='heading'><b>Note: </b>ACII is basically a encoding standard for English characters. It contains numbers from 0 to 9 and use those numbers
+        to represent for English characters. Instead of wirtting 'A' you can write it as 65, the computer somehow can still understand that it is 'A' not 65
+        </p>
+    <p class='heading'><b>Note: </b> Just like an array, the first character's position of a string is <code>0</code></p>
+        <table border='1'>
+            <tr>
+                <td><code>string.charCodeAt(number)</code></td>
+                <td>Used to translated a character into ACII numbers<br>
+                The number in prenthesis is the position of the char wanted to be translated in the main string</td>
+        </tr>   
+
+        </table><br>
+<!--editor 13-->
+<div class="box" id="box13"> 
+    <div class="headbar">
+        <a onclick="runcode(editor13,'result13')">RUN</a>
+        <a onclick="changeView('box13')">Change View</a>
+        <a onclick="editor13.resize()">Fit content</a>
+    </div>
+    <div class="editor" id="edit13">
+        <div class='code' id="code13"></div>
+        <iframe class="result" id="result13">result here</iframe>
+    </div>
+</div>
+</div>
+<!--question 12-->
+ <div id="q12">
+    <h1>Question 12</h1>
+    <p class='heading'><b>  Count the number of words in the string "beg" that have 2,3,4,5 or 6 characters
+        show these five counts on a single line separated by commas in the span block with id="ans12"
+        </b></p>
+    <p><b>Solve:</b><br>
+    (1) Make a five-element array, initilize each element as 0<br>
+    (2) Make a loop going through all the words in beg(array of beg words)<br>
+    (3) Check if each word's length = 2,3,4,5 or 6 by using <code>string.length</code> method <br>
+    (4) If the condition is true, increase the count element by 1 <br> </p>
+    <p class='heading'><b>Note: </b>We can use the <code>switch</code> for this question</p>
+    <p class='heading'><b>Note: </b>Can imagine a string is an array of characters</p>
+    
+<!--editor 14-->
+<div class="box" id="box14"> 
+    <div class="headbar">
+        <a onclick="runcode(editor14,'result14')">RUN</a>
+        <a onclick="changeView('box14')">Change View</a>
+        <a onclick="editor14.resize()">Fit content</a>
+    </div>
+    <div class="editor" id="edit14">
+        <div class='code' id="code14"></div>
+        <iframe class="result" id="result14">result here</iframe>
+    </div>
+</div>
+</div> 
+<!--question 13-->
+<div id="q13">
+    <h1>Question 13</h1>
+    <p class='heading'><b> Ceate a new string that contains the words in the string "beg" in reverse order
+  show this new string on a single line in the span block with id="ans13"</b></p>
+    <p><b>Solve:</b><br>
+    (1) With the array of words, make a loop going through each word<br>
+    (2) With each word, use <code>split('')</code> to split the word into an array of chars<br>
+    (3) Make an inner loop for those chars, in which the count element <code>j</code> of the inner loop won't start at 0, it will start at the last char and end at the first char of the word<br>
+    (4) In the inner loop, append each char in a completely new word<br>
+    (5) <code>push()</code> that new word into the new array, this new array is what we are looking for</p>
+    <p class='heading'><b>Note: </b>In <code>for</code> loop: <code>for(i=0;i&ltlength;i++)</code> the count element isn't necessarily 0 but can be any number </p>
+    
+        <!--editor 15-->
+        <div class="box" id="box15"> 
+            <div class="headbar">
+                <a onclick="runcode(editor15,'result15')">RUN</a>
+                <a onclick="changeView('box15')">Change View</a>
+                <a onclick="editor15.resize()">Fit content</a>
+            </div>
+            <div class="editor" id="edit15">
+                <div class='code' id="code15"></div>
+                <iframe class="result" id="result15">result here</iframe>
+            </div>
+        </div>
+</div>
+<!--question 14-->
+ <div id="q14">
+    <h1>Question 14</h1>
+    <p class='heading'><b>Create a new string that contains the characters in the string "beg" in all capital letters
+          show this new string on a single line in the span block with id="ans14"</b></p>
+    <p><b>Solve:</b>Use <code>string.upperCase()</code> method </p>
+</div> 
+<!--question 15-->
+ <div id="q15">
+    <h1>Question 15</h1>
+    <p class='heading'><b> Store the number of times the letter "a" appears in the string "beg" in 1st location;
+        <br>   Store the number of times the letter "b" appears in the string "beg" in 2nd location;
+        <br>     Store the number of times the letter "c" appears in the string "beg" in 3rd location;
+        <br>    Store the number of times the letter "d" appears in the string "beg" in 4th location;
+       <br>     etc.
+       <br>    Show the 26 counts on one line separated by commas in the span block with id="ans15"</b></p>
+    <p><b>Solve:</b><br>
+    (1) Use ACII to do it fast<br>
+    (2) Make an 26-element array X, initilize all the elements of X as <code>0</code>, X is used to containted the count of 26 chars<br>
+    (3) Make a loop passing through each char of beg<br>
+    (3) With each char that the loop passes through, increase the coressponding count element in X by 1 unit<br>
+    (5) For example: the loop is passing through 'b', then increase the 2nd location in X,br>
+(6) How do it now 'b' belongs to 2nd location?<br>
+<code>'b'.charCodeAt(0)-97</code> <code>=</code> <code>1</code> and <code>1</code> is the 2nd location in array X</p>
+    <p class='heading'><b>Note: </b>This question is hard</p>
+    <p class='heading'><b>Note: </b>In ACII, the number of 'a' char is 97 so <code>'a'.charCodeAt(0)-97</code> <code>=</code> <code>0</code> and the number of 'c' char is
+    99 so <code>'c'.charCodeAt(0)-97</code> <code>=</code> <code>2</code></p>
+        <table border='1'>
+            <tr>
+                <td><code></code></td>
+                <td>if the condition true, excute the codes inside</td>
+        </tr>   
+        <tr>
+            <td><code></code></td>
+            <td>equivalent to number = number + 1</td>
+        </tr>
+        <tr>
+            <td><code></code></td>
+            <td>equivalent to number = number - 1</td>
+        </tr>
+        </table><br>
+        <!--editor 16-->
+        <div class="box" id="box16"> 
+            <div class="headbar">
+                <a onclick="runcode(editor16,'result16')">RUN</a>
+                <a onclick="changeView('box16')">Change View</a>
+                <a onclick="editor16.resize()">Fit content</a>
+            </div>
+            <div class="editor" id="edit16">
+                <div class='code' id="code16"></div>
+                <iframe class="result" id="result16">result here</iframe>
+            </div>
+        </div>
+</div>
 </article>
 
 

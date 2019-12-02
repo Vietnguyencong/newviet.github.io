@@ -149,6 +149,105 @@ pre_string10=`<div id='demo'></div>
 </script>`
 set_up_editor(editor10,pre_string10);
 
+editor11= ace.edit("code11"); // set up editor 11 (fix 6 cai)
+pre_string11=`
+
+<div id='demo0'>table should be right here</div>
+<script>
+    var mystring='record   the  occurences " e" i n beg '
+    var arr_of_wor=mystring.split(' ')
+    console.log(arr_of_wor)
+    os='<table border="2px"style="background-color:green">'
+    for(i=0;i<arr_of_wor.length/2;i++){
+        os+='<tr>'
+        for (j=0;j<2;j++){
+            if(arr_of_wor[i*2+j]=='') {
+                os+='<td>null</td>'
+        } 
+            else{
+                os+='<td>'+arr_of_wor[i*2+j]+'</td>'
+            }
+        }
+        os+='</tr>'
+    }
+    os+='</table>'
+    demo0.innerHTML=os
+</script>`
+set_up_editor(editor11,pre_string11);
+
+editor12= ace.edit("code12"); // set up editor 12 (fix 6 cai)
+pre_string12=`
+
+<div id='demo0'>the result should be right here</div>
+<script>
+    var mystring='record   the  occurences " e" i n beg '
+    while(mystring.indexOf(' ')>-1){
+        mystring=mystring.replace(' ','*')
+    }
+    demo0.innerHTML=mystring
+</script>`
+set_up_editor(editor12,pre_string12);
+
+editor13= ace.edit("code13"); // set up editor 13 (fix 6 cai)
+pre_string13=`
+<div id='demo0'>the result should be right here</div>
+<script>
+    var mystring='abc'
+    var acii_char0=mystring.charCodeAt(0)
+    var acii_char1=mystring.charCodeAt(1)
+    demo0.innerHTML=acii_char0+' , '+acii_char1
+</script>`
+set_up_editor(editor13,pre_string13);
+
+
+editor14= ace.edit("code14"); // set up editor 14 (fix 6 cai)
+pre_string14=`
+<div id='demo0'>the result should be right here</div>
+<script>
+var mystring='my full nam iss Viet Nguyen Cog'
+var countArray=[0,0]
+words=mystring.split(' ')
+for(i=0;i<words.length;i++){
+    if(words[i].length==2)countArray[0]++;
+    if(words[i].length==3)countArray[1]++;
+}
+demo0.innerHTML=countArray
+</script>`
+set_up_editor(editor14,pre_string14);
+
+
+editor15= ace.edit("code15"); // set up editor 15 (fix 6 cai)
+pre_string15=`
+<div id='demo0'>the result should be right here</div>
+<script>
+    var mystring='123456789'
+    var newWord=''
+    chars=mystring.split('')
+    for(i=chars.length-1;i>=0;i--){
+        var x=chars[i]
+        newWord+=x
+    }
+    demo0.innerHTML=newWord
+</script>`
+set_up_editor(editor15,pre_string15);
+
+editor16= ace.edit("code16"); // set up editor 16 (fix 6 cai)
+pre_string16=`
+<div id='demo0'>the result should be right here</div>
+<script>
+    var mystring = 'viet nguyen cong'
+    x = []
+    for (i = 0; i < 26; i++) {
+        x[i] = 0;
+    }
+    mystring.split("");
+    for (i = 0; i < mystring.length; i++) {
+        x[mystring[i].charCodeAt(0) - 97]++;
+    }
+    demo0.innerHTML = 'Array counting 26 chars in mystring: <br>'+ x
+</script>`
+set_up_editor(editor16,pre_string16);
+
 
 
 
@@ -245,16 +344,18 @@ function trackElement(id){
 
 //change view to large / small for the small editor in the tutorial
 var viewChanged= true;
+
 function changeView(id){
   if (viewChanged==true){
+    // editor.resize()
     document.getElementById(id).style.width="120%"
     document.getElementById(id).style.height="380px"
     document.getElementById(id).style.transform="translateX(-60px)"
     document.getElementById(id).style.zIndex="1000"
     document.getElementById(id).children[0].children[1].text='Change into small view'
+    document.getElementById(id).children[0].children[2].text='fit content for big view'
     // document.getElementById(id).style.position="fixed"
     document.getElementById("bg-modal").style.display="block"
-
     viewChanged=false
   }
   else {// turn back into the normal stage
@@ -263,13 +364,13 @@ function changeView(id){
     document.getElementById(id).style.transform="translateX(0)"
     document.getElementById(id).style.zIndex="998"
     document.getElementById(id).children[0].children[1].text='Change View'
-
+    document.getElementById(id).children[0].children[2].text='fit content for small view'
     // document.getElementById(id).style.position=""
     document.getElementById("bg-modal").style.display="none"
-    
     viewChanged=true
   }
 }
+
 
 //move to a diffent article session
 function changeArticle(artID){

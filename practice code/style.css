@@ -91,7 +91,7 @@ header ul li:hover a {
     position: fixed;
     top: 70px;
     font-size: 12pt;
-    width: 15%;
+    width: 18%;
     top: 70px;
     overflow-y: scroll;
     bottom:0;
@@ -247,14 +247,17 @@ table{
 
 #bottom{
     position: relative;
-    
     height:250px;
     margin: 20px;
 }
 
 p{
     position: relative;
-    left:20px
+    left:15px
+}
+p.heading {
+    position: relative;
+    left: 0px
 }
 
 /* side controller */
