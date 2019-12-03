@@ -740,20 +740,7 @@ with id="ans11"</b></p>
     <p class='heading'><b>Note: </b>This question is hard</p>
     <p class='heading'><b>Note: </b>In ACII, the number of 'a' char is 97 so <code>'a'.charCodeAt(0)-97</code> <code>=</code> <code>0</code> and the number of 'c' char is
     99 so <code>'c'.charCodeAt(0)-97</code> <code>=</code> <code>2</code></p>
-        <table border='1'>
-            <tr>
-                <td><code></code></td>
-                <td>if the condition true, excute the codes inside</td>
-        </tr>   
-        <tr>
-            <td><code></code></td>
-            <td>equivalent to number = number + 1</td>
-        </tr>
-        <tr>
-            <td><code></code></td>
-            <td>equivalent to number = number - 1</td>
-        </tr>
-        </table><br>
+        
         <!--editor 16-->
         <div class="box" id="box16"> 
             <div class="headbar">
@@ -766,6 +753,250 @@ with id="ans11"</b></p>
                 <iframe class="result" id="result16">result here</iframe>
             </div>
         </div>
+</div>
+<!--question 16-->
+ <div id="q16">
+    <h1>Question 16</h1>
+    <p class='heading'><b>Examine the radio buttons and produce a list of the three "values" of the radios buttons separated by commas on a single line
+        in the span block with id="ans16"</b></p>
+    <p><b>Solve:</b><br>
+    (1) Find the radio elements in the form twocities: there are many ways to extract the radio elements out from a form <br>
+    (2) Name of radio buttons are 'books', use <code>document.getElementByName('books')</code>
+     method, the method will return an array of inputs which named as 'books'
+    <br>
+    (3) Make a <code>for</code> loop go through all the elements in the array<br>
+    (4) With each element, use <code>[element].value</code> to take the value out</p>
+    <p class='heading'><b>Note: </b>In Raido button list, only 1 value is chosen</p>
+        <table border='1'>
+            <tr>
+                <td><code>document.[formName].[elementName].value</code></td>
+                <td>Extract the value from the element</td>
+        </tr>   
+        <tr>
+            <td><code>document.getsElementByName('name')</code></td>
+            <td>Return a list of values of the element based on its name </td>
+        </tr>
+        <tr>
+            <td><code>document.getsElementByTagName('div')</code></td>
+            <td>Return a list of values of all the <code>div</code> elements  </td>
+        </tr>
+        </table><br>
+<!--editor 17-->
+<div class="box" id="box17"> 
+        <div class="headbar">
+            <a onclick="runcode(editor17,'result17')">RUN</a>
+            <a onclick="changeView('box17')">Change View</a>
+            <a onclick="editor17.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit17">
+            <div class='code' id="code17"></div>
+            <iframe class="result" id="result17">result here</iframe>
+        </div>
+    </div>
+</div> 
+<!--question 17-->
+ <div id="q17">
+    <h1>Question 17</h1>
+    <p class='heading'><b>Show the value of the radio button which is checked and its elements number separated by a comma on a line by itself
+     in the span block with id="ans17"</b></p>
+    <p><b>Solve:</b><br>
+    (1) From the array of 'books' list above, make a <code>for</code> loop<br>
+    (2) With each element in the array, check if that element is checked or not by using <code>[element].checked</code><br>
+    (3) If the condition is <code>true</code>, store its value and its count number to 2 variables
+ </p>
+    <p class='heading'><b>Note: </b>Different to radio button, we can check multiple options in <code>checkbox</code> type input </p>
+        <table border='1'>
+            <tr>
+                <td><code>[element].checked</code></td>
+                <td>Used for input element, return true if the input element is checked</td>
+        </tr>   </table><br>
+<!--editor 18-->
+<div class="box" id="box18"> 
+        <div class="headbar">
+            <a onclick="runcode(editor18,'result18')">RUN</a>
+            <a onclick="changeView('box18')">Change View</a>
+            <a onclick="editor18.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit18">
+            <div class='code' id="code18"></div>
+            <iframe class="result" id="result18">result here</iframe>
+        </div>
+    </div>   
+
+</div>
+<!--question 18-->
+ <div id="q18">
+    <h1>Question 18</h1>
+    <p class='heading'><b>Show the elements number and value of the six checkboxes in a six-row, two-column table with a 2 pixel border
+    in the span block with id="ans18"</b></p>
+    <p><b>Solve:</b><br>
+    (1) I will assume the element number will be its position in the 'twocities' form<br>
+    (2) Make a loop repeating for 6 times as the table has 6 rows<br>
+    (3) At beginning of each loop make an <code>if</code> statement to check the <code>input</code> element is <code>checkbox</code> element or not<br>
+    (4) In each loop (each row), the first cell be the element number, the second cell will be the value of the element<br>
+    (5) How to get the element number: the element number will be the count element <code>i</code><br>
+    (6) how to get the value of the element: use <code>[element].value</code><br></p>
+    <p class='heading'><b>Note: </b> In <code>&ltinput type="radio" name='js' value="V"></code> statement, <code>type</code>, <code>name</code>, <code>value</code>
+    , those are called attributes of the element. Attributes of a element normally are display at the begining HTMl tag</p>
+        <table border='1'>
+            <tr>
+                <td><code>document.[formName].[elementName].type</code></td>
+                <td>Get type value of that element</td>
+        </tr>   
+        </table><br>
+<!--editor 19-->
+<div class="box" id="box19"> 
+        <div class="headbar">
+            <a onclick="runcode(editor19,'result19')">RUN</a>
+            <a onclick="changeView('box19')">Change View</a>
+            <a onclick="editor19.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit19">
+            <div class='code' id="code19"></div>
+            <iframe class="result" id="result19">result here</iframe>
+        </div>
+    </div> 
+</div>
+<!--question 19-->
+ <div id="q19">
+    <h1>Question 19</h1>
+    <p class='heading'><b>    Examine the checkboxes and produce a list of the "values" of the checkboxes that are checked. Separated the values by commas on a single line
+        </b> </p>
+    <p><b>Solve:</b><br>
+    (1) Make a loop that go through every input element in the form, 
+    <br>
+    (2) In each loop, check if the current element is <code>checkbox</code> type or not and also check if that element is checked or not using <code>[element].checked==true</code> <br>
+  </p>
+    <p class='heading'><b>Note: </b>Because [element].checked return <code>true/false</code>, we can write <code>if([element].checked){//some code}</code></p>
+        
+<!--editor 20-->
+<div class="box" id="box20"> 
+        <div class="headbar">
+            <a onclick="runcode(editor20,'result20')">RUN</a>
+            <a onclick="changeView('box21')">Change View</a>
+            <a onclick="editor20.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit20">
+            <div class='code' id="code20"></div>
+            <iframe class="result" id="result20">result here</iframe>
+        </div>
+    </div>   
+</div>
+<!--question 20-->
+<div id="q20">
+    <h1>Question 20</h1>
+    <p class='heading'><b>Show the values of all the options in the select (drop down menu) named "book3chapters" 
+            in an fifteen-column one row table with a 2 pixel border border
+         in the span block with id="ans20"</b></p>
+    <p><b>Solve:</b><br>
+    (1) Use <code>document.getElementByTagName('tagname')</code> to get the list of <code>option</code> elements<br>
+    (2) Make a <code>for</code> loop repeating 15 times as the table has 15 rows and 1 column<br>
+    (3) In each loop display the value of element in the cell<br>
+   </p>
+    <p class='heading'><b>Note: </b>In this question, we notice that the <code>option</code> elements is inside 1 <code>select</code> element named <code>book3chapters</code>, so we 
+    can use <code>document.getsElementByName('book3chapters').children</code>. The statement will return an array of child elments inside the parent element <code>select</code></p>
+        <table border='1'>
+            <tr>
+                <td><code>document.getElementsByName('viet').children</code></td>
+                <td>Get the list of children elements of parent element names 'viet'</td>
+        </tr>   
+        
+        </table><br>
+<!--editor 21-->
+<div class="box" id="box21"> 
+        <div class="headbar">
+            <a onclick="runcode(editor21,'result21')">RUN</a>
+            <a onclick="changeView('box21')">Change View</a>
+            <a onclick="editor21.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit21">
+            <div class='code' id="code21"></div>
+            <iframe class="result" id="result21">result here</iframe>
+        </div>
+    </div>   
+</div> 
+<!--question 22-->
+ <div id="q22">
+    <h1>Question 22</h1>
+    <p class='heading'><b>Show the text phrases that are separated by commas in the string "beg2" . Each phrase should be on a line by itself.
+             Place the result in the span block with id="ans22"</b></p>
+    <p><b>Solve:</b><br>
+    (1) <code>split(',')</code> beg2 string as each phrase is seperated by a comma in the main string <br>
+    (2) After <code>split()</code>, we have a new array of phrases, make a <code>for</code> loop and add at the end of the elements of the array <code>&ltbr></code> <br>
+  </p>
+<!--editor 22-->
+<div class="box" id="box22"> 
+        <div class="headbar">
+            <a onclick="runcode(editor22,'result22')">RUN</a>
+            <a onclick="changeView('box22')">Change View</a>
+            <a onclick="editor22.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit22">
+            <div class='code' id="code22"></div>
+            <iframe class="result" id="result22">result here</iframe>
+        </div>
+    </div>
+
+</div>
+<!--question 23-->
+ <div id="q23">
+    <h1>Question 23</h1>
+    <p class='heading'><b>Capitalize the first letter of each phrase from #22 bove (phrases are separated by commas) in the original string "beg2". 
+           Place each phrase should be on a line by itself. 
+        Place the result in the span block with id="ans23"</b></p>
+        <p><b>Solve:</b><br>
+            (1) Make a loop for the Array of phrases<br>
+            (2) In each loop, declare a new variable which will later contain the new phrase with its first letter capitalized<br>
+            (3) Append the first capitalized letter of the current phrase to the new variable, use <code>[string].toUpperCase()</code> method<br>
+            (4) Make an inner loop going from the second letter  to the last letter of the current phrase<br>
+            (5) In the inner loop, append the current letter taken from the current phrase to the new variable, using <code>newVariable += currentPhrase[i]</code></p>
+            <p class='heading'><b>Note: </b>A string is similar to an array of chars, <code>string[2]</code> is the 3rd letter of the string</p>
+
+<!--editor 23-->
+<div class="box" id="box23"> 
+        <div class="headbar">
+            <a onclick="runcode(editor23,'result23')">RUN</a>
+            <a onclick="changeView('box23')">Change View</a>
+            <a onclick="editor23.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit23">
+            <div class='code' id="code23"></div>
+            <iframe class="result" id="result23">result here</iframe>
+        </div>
+    </div>
+
+</div> 
+<!--question 24-->
+ <div id="q24">
+    <h1>Question 24</h1>
+    <p class='heading'><b> Make the third radio button ("The Track of The Storm") checked.
+                Make ALL six of the checkboxes be checked.
+               Make the select named "book3chapters" (the drop down menu) show "Fifty-Two" as the selection
+                Place the string "DONE!" in the span block with id="ans24"
+            </b></p>
+    <p><b>Solve:</b> Make the third radio button checked<br>
+    (1) Make a loop of through all the elements in the <code>radio</code>> list<br>
+    (2) In each loop, find the radio element which has its value <code>3</code> <br>
+    (3) Once the loop find it, do <code>[element].checked=true</code><br>
+    </p>
+    <p><b>Solve:</b>Make the select named "book3chapters" (the drop down menu) show "Fifty-Two" as the selection <br>
+    (1) Make a loop of through all the elements in the <code>option</code> list<br>
+    (2) In each loop, find the ooption element which has its value <code>"Fifty-Two"</code><br>
+    (3) Once the loop find it, do <code>[element].checked=true</code><br>
+    </p>
+<!--editor 24-->
+<div class="box" id="box24"> 
+        <div class="headbar">
+            <a onclick="runcode(editor24,'result24')">RUN</a>
+            <a onclick="changeView('box24')">Change View</a>
+            <a onclick="editor24.resize()">Fit content</a>
+        </div>
+        <div class="editor" id="edit24">
+            <div class='code' id="code24"></div>
+            <iframe class="result" id="result24">result here</iframe>
+        </div>
+    </div>
+
 </div>
 </article>
 

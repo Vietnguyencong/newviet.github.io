@@ -1,19 +1,23 @@
 <html>
 
 <body>
-    <div id='demo0'>the result should be right here</div>
+    <form>
+        <input type="radio" name='js' value="V" checked> Viet&nbsp;
+        <input type="radio" name='js' value="N"> Nguyen&nbsp;
+        <input type="radio" name='js' value="C"> Cong&nbsp;
+        <br><input type='button' onclick='retrieve()' value='click here'>
+        <div id='demo0'>the answer</div>
+    </form>
     <script>
-        var mystring = 'viet nguyen cong'
-        x = []
-        for (i = 0; i < 26; i++) {
-            x[i] = 0;
+        function retrieve() {
+            var mylist = document.getElementsByName('js')
+            for (i = 0; i < mylist.length; i++) {
+                if (mylist[i].value == 'C') {
+                    mylist[i].checked = true
+                }
+            }
+            demo0.innerHTML = 'Done'
         }
-        mystring.split("");
-        for (i = 0; i < mystring.length; i++) {
-            x[mystring[i].charCodeAt(0) - 97]++;
-        }
-
-        demo0.innerHTML = x
     </script>
 </body>
 

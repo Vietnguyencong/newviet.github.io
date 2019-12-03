@@ -248,7 +248,188 @@ pre_string16=`
 </script>`
 set_up_editor(editor16,pre_string16);
 
+editor17= ace.edit("code17"); // set up editor 17 (fix 6 cai)
+pre_string17=`
+<form>
+    <input type="radio" name='js' value="V" checked> Viet&nbsp;
+    <input type="radio" name='js' value="N"> Nguyen&nbsp;
+    <input type="radio" name='js' value="C"> Cong&nbsp;
+    <br><input type='button' onclick='retrieve()' value='click here'>
+    <div id='demo0'>the answer</div>
+</form>
+<script>
+    function retrieve() {
+        var mylist = document.getElementsByName('js')
+        x = []
+        console.log(mylist)
+        for (i = 0; i < mylist.length; i++) {
+            x.push(mylist[i].value)
+        }
+        demo0.innerHTML = x
+    }
+</script>`
+set_up_editor(editor17,pre_string17);
 
+editor18= ace.edit("code18"); // set up editor 18 (fix 6 cai)
+pre_string18=`
+<form>
+<input type="radio" name='js' value="V" > Viet&nbsp;
+<input type="radio" name='js' value="N" checked> Nguyen&nbsp;
+<input type="radio" name='js' value="C"> Cong&nbsp;
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>the answer</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByName('js')
+    var count_element=0
+    var checked_element
+    console.log(mylist)
+    for (i = 0; i < mylist.length; i++) {
+        if (mylist[i].checked==true){
+            count_element=i;
+            checked_element=mylist[i].value
+        }
+    }
+    demo0.innerHTML = count_element+","+checked_element
+}
+</script>`
+set_up_editor(editor18,pre_string18);
+
+editor19= ace.edit("code19"); // set up editor 19 (fix 6 cai)
+pre_string19=`
+<form>
+<input type="radio" name='js' value="V" > Viet&nbsp;
+<input type="radio" name='js' value="N" checked> Nguyen&nbsp;<br>
+<input type="checkbox" name='js' value="V" > Viet&nbsp;
+<input type="checkbox" name='js' value="N" checked> Nguyen&nbsp;
+<input type="checkbox" name='js' value="C" checked> Cong&nbsp;
+<input type="checkbox" name='js' value="a" > abc&nbsp;
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>answer is right here</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByName('js')
+    os='<table>'
+    for (i = 0; i < mylist.length; i++) {
+        if (mylist[i].type=='checkbox'){
+            // you can the rest, I am lazy, sorry!
+        }
+    }
+    os+='</table>'
+    demo0.innerHTML = os`
+set_up_editor(editor19,pre_string19);
+
+
+editor20= ace.edit("code20"); // set up editor 20(fix 6 cai)
+pre_string20=`
+<form>
+<input type="radio" name='js' value="V" > Viet&nbsp;
+<input type="radio" name='js' value="N" checked> Nguyen&nbsp;<br>
+<input type="checkbox" name='js' value="V" > Viet&nbsp;
+<input type="checkbox" name='js' value="N" checked> Nguyen&nbsp;
+<input type="checkbox" name='js' value="C" checked> Cong&nbsp;
+<input type="checkbox" name='js' value="a" > abc&nbsp;
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>answer is right here</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByTagName('input')
+    checked_list=[]
+    for (i = 0; i < mylist.length; i++) {
+        if (/*check if the element is checkbox */&&/*check if the element is checked*/){
+            // you can do the rest, I am lazy, sorry!
+        }
+    }
+    demo0.innerHTML = checked_list
+}
+</script>`
+set_up_editor(editor20,pre_string20);
+
+editor21= ace.edit("code21"); // set up editor 21(fix 6 cai)
+pre_string21=`
+<form name='nguyen_cong'>
+<select name='viet'>
+    <option value='n'>Viet</option>
+    <option value='c'>Nguyen</option>
+    <option value='v'>Cong</option>
+</select>
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>answer appear right here</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByTagName('option')
+    os="<table border='1px'>"
+    for (i = 0; i < mylist.length; i++) {
+        os+='<tr>'
+        os+='<td>'+ /*you do it*/+ '</td>'
+        os+='</tr>'
+    }
+    os+='</table>'
+    demo0.innerHTML = os
+}
+</script>`
+set_up_editor(editor21,pre_string21);
+
+editor22= ace.edit("code22"); // set up editor 22(fix 6 cai)
+pre_string22=`
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>answer appear right here</div>
+<script>
+    function retrieve() {
+        var mystring = 'nguyen congviet, nguyen congviet, nguyen congviet, nguyen congviet'
+        var phrase_list = mystring.split(',')
+        for (i = 0; i < phrase_list.length; i++) {
+            phrase_list[i]=phrase_list[i]+'<br>'
+        }
+        demo0.innerHTML = phrase_list
+    }
+</script>`
+set_up_editor(editor22,pre_string22);
+
+editor23= ace.edit("code23"); // set up editor 23(fix 6 cai)
+pre_string23=`
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo'></div>
+<div id='demo0'>answer appears right here</div>
+<script>
+    function retrieve() {
+        var mystring = 'viet nguyen cong'
+        //capitalize the first letter of mystring
+        var newString=mystring[0].toUpperCase()
+        for(i=1;i<mystring.length;i++){
+            newString+=mystring[i]
+        }
+        demo.innerHTML=mystring
+        demo0.innerHTML = newString
+    }
+</script>`
+set_up_editor(editor23,pre_string23);
+
+editor24= ace.edit("code24"); // set up editor 24(fix 6 cai)
+pre_string24=`
+<form>
+<input type="radio" name='js' value="V" checked> Viet&nbsp;
+<input type="radio" name='js' value="N"> Nguyen&nbsp;
+<input type="radio" name='js' value="C"> Cong&nbsp;
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>the answer</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByName('js')
+    for (i = 0; i < mylist.length; i++) {
+        if (mylist[i].value == 'C') {
+            mylist[i].checked = true
+        }
+    }
+    demo0.innerHTML = 'Done'
+}
+</script>`
+set_up_editor(editor24,pre_string24);
 
 
 //set up the html editor function
@@ -348,9 +529,9 @@ var viewChanged= true;
 function changeView(id){
   if (viewChanged==true){
     // editor.resize()
-    document.getElementById(id).style.width="120%"
-    document.getElementById(id).style.height="380px"
-    document.getElementById(id).style.transform="translateX(-60px)"
+    document.getElementById(id).style.width="130%"
+    document.getElementById(id).style.height="480px"
+    document.getElementById(id).style.transform="translateX(-125px)"
     document.getElementById(id).style.zIndex="1000"
     document.getElementById(id).children[0].children[1].text='Change into small view'
     document.getElementById(id).children[0].children[2].text='fit content for big view'
@@ -369,6 +550,7 @@ function changeView(id){
     document.getElementById("bg-modal").style.display="none"
     viewChanged=true
   }
+  
 }
 
 
