@@ -357,7 +357,7 @@ pre_string21=`
     <option value='v'>Cong</option>
 </select>
 <br><input type='button' onclick='retrieve()' value='click here'>
-<div id='demo0'>answer appear right here</div>
+<div id='demo0'>answer appears right here</div>
 </form>
 <script>
 function retrieve() {
@@ -431,6 +431,31 @@ function retrieve() {
 </script>`
 set_up_editor(editor24,pre_string24);
 
+editor25= ace.edit("code25"); // set up editor 25(fix 6 cai)
+pre_string25=`
+<form name='nguyen_cong'>
+<select name='viet'>
+    <option value='viet'>Viet</option>
+    <option value='nguyen'>Nguyen</option>
+    <option value='cong'>Cong</option>
+</select>
+<br><input type='button' onclick='retrieve()' value='click here'>
+<div id='demo0'>answer appears right here</div>
+</form>
+<script>
+function retrieve() {
+    var mylist = document.getElementsByTagName('option')
+    var select_value=document.nguyen_cong.viet.value
+    var index
+    for (i = 0; i < mylist.length; i++) {
+        if(mylist[i].value==select_value){
+            index=i
+        }
+    }
+    demo0.innerHTML = select_value+","+index
+}
+</script>`
+set_up_editor(editor25,pre_string25);
 
 //set up the html editor function
 function set_up_editor(editor,pre_string) {

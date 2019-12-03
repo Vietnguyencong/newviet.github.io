@@ -944,7 +944,7 @@
                 <p class='heading'><b>Note: </b>In this question, we notice that the <code>option</code> elements is
                     inside 1 <code>select</code> element named <code>book3chapters</code>, so we
                     can use <code>document.getsElementByName('book3chapters').children</code>. The statement will return
-                    an array of child elments inside the parent element <code>select</code></p>
+                    an array of child elements inside the parent element <code>select</code></p>
                 <table border='1'>
                     <tr>
                         <td><code>document.getElementsByName('viet').children</code></td>
@@ -965,6 +965,31 @@
                     </div>
                 </div>
             </div>
+            <!--question 21-->
+<div id="q21">
+    <h1>Question 21</h1>
+    <p class='heading'><b> Show the value of the select (drop down menu) named "book3chapters" which is selected and its selectedIndex value separated by a comma on a line by itself
+          in the span block with id="ans21"</b></p>
+    <p><b>Solve:</b><br>
+    (1) First, get the value of drop-down meny first, use <code>document.[formName].[elementName].value</code><br>
+    (2) Make a loop going through all the <code>option</code> elements<br>
+    (3) Compare the current value of the <code>option</code> element to the value of drop-down menu<br>
+    (4) If the condition matches, store the index and the value of the current <code>option</code> element
+ </p>
+<!--editor 25-->
+<div class="box" id="box25">
+    <div class="headbar">
+        <a onclick="runcode(editor25,'result25')">RUN</a>
+        <a onclick="changeView('box25')">Change View</a>
+        <a onclick="editor25.resize()">Fit content</a>
+    </div>
+    <div class="editor" id="edit25">
+        <div class='code' id="code25"></div>
+        <iframe class="result" id="result25">result here</iframe>
+    </div>
+</div>
+
+</div>
             <!--question 22-->
             <div id="q22">
                 <h1>Question 22</h1>

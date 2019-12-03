@@ -1,24 +1,28 @@
 <html>
 
 <body>
-    <form>
-        <input type="radio" name='js' value="V" checked> Viet&nbsp;
-        <input type="radio" name='js' value="N"> Nguyen&nbsp;
-        <input type="radio" name='js' value="C"> Cong&nbsp;
+    <form name='nguyen_cong'>
+        <select name='viet'>
+            <option value='viet'>Viet</option>
+            <option value='nguyen'>Nguyen</option>
+            <option value='cong'>Cong</option>
+        </select>
         <br><input type='button' onclick='retrieve()' value='click here'>
-        <div id='demo0'>the answer</div>
-    </form>
-    <script>
+        <div id='demo0'>answer appears right here</div>
+        </form>
+        <script>
         function retrieve() {
-            var mylist = document.getElementsByName('js')
+            var mylist = document.getElementsByTagName('option')
+            var select_value=document.nguyen_cong.viet.value
+            var index
             for (i = 0; i < mylist.length; i++) {
-                if (mylist[i].value == 'C') {
-                    mylist[i].checked = true
+                if(mylist[i].value==select_value){
+                    index=i
                 }
             }
-            demo0.innerHTML = 'Done'
+            demo0.innerHTML = select_value+","+index
         }
-    </script>
+        </script>
 </body>
 
 </html>
