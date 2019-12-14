@@ -179,15 +179,11 @@ article{
     position: relative; 
     display:flex;
     flex-direction: column;
-    /* z-index: 99; */
     width:90%;
-    /* width:110%; */
     border: 2px solid #f0932b;
     height: 270px; 
-    /* height: 500px; */
     transition-duration:0.5s;
     z-index: 998;
-    /* transform: translateX(-30px)  */
 }
 
  .editor{
