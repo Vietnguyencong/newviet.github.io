@@ -179,10 +179,15 @@
                 </ul>
             </div>
 
+            
+        
         </article>
         <!-- article 1 -->
         <article id="article1">
 
+            <!-- small rate box -->
+         
+        
             <div id="q0">
                 <p style="font-size: 8pt;text-align:right">Note: This materials is for instructional purpose only! I
                     won't provide the full answers because Dr. Parks won't allow so</p>
@@ -263,6 +268,11 @@
 
             <div id="q1">
                 <h1>Question 1</h1>
+                <div style='display:inline'>
+                    <img src='../Picture/output-onlinepngtools.png' width="150px" height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='rate()'>
+                </div>
+                
                 <p class='heading'><b>How many words are the string named "beg"? (words not characters)
                         <br>Show the answer in the span block with id = "ans1"</b></p>
                 <p><b>Solve: </b>split the string beg into words use <code>split()</code> method then caculate the
@@ -1097,8 +1107,18 @@
 
 
     </div>
-
-    <div id="bg-modal"></div>
+    <div id=rate_box >
+        <P class='exit'>+</P>
+        <p style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
+      <div style='display:inline-block'>
+          <input  class='rate' style='border-radius:5px' type='button' value='1' onclick=''>
+          <input  class='rate' style='border-radius:5px' type='button' value='2' onclick=''>
+          <input  class='rate' style='border-radius:5px' type='button' value='3' onclick=''>
+          <input  class='rate' style='border-radius:5px' type='button' value='4' onclick=''>
+          <input  class='rate' style='border-radius:5px' type='button' value='5' onclick=''>
+      </div>
+    </div>
+    <div class="bg-modal"></div>
     <div id='bottom'>
         <div style="position: relative;;text-align:left;top: 220px;font-size: 8pt;padding-left: 20px;">
             vietnguyencong99@gmail.com</div>

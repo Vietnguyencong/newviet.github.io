@@ -589,3 +589,21 @@ function changeArticle(artID){
 }
 
 
+// rate the difficulty of the question
+function rate(){
+    document.getElementById("bg-modal").style.display="block"
+}
+document.querySelector('.exit').addEventListener('click',function(){ close_box()})
+
+
+function close_box(){
+    document.getElementById('rate_box').style.display='none'
+}
+function open_rate_box(){
+    document.getElementById('rate_box').style.display='flex'
+   
+}
+// note 50 is 1 star
+function  rate(question_number, value){
+    //somecode here
+}

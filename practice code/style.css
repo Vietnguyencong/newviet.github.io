@@ -9,7 +9,7 @@ body
 }
 header{
     position: fixed;
-    background-color:#f0932b;
+    background-color:#192a56;
     COLOR:BLACK;
     FONT-FAMILY: monospace;
     width: 100%;
@@ -46,7 +46,7 @@ header ul li ul:hover{
     color: black;
 }
 header ul li ul li{
-    background-color: #f0932b;
+    background-color: ##192a56;
 }
 header ul li ul li a {
     color: black;
@@ -72,7 +72,7 @@ header ul li:hover {
 }
 header ul li:hover a {
     text-decoration: none;
-    color:#f0932b;
+    color:#192a56;
 }
 
 
@@ -125,7 +125,7 @@ header ul li:hover a {
     transform: translateX(-40px);
 }
 #container ul li ul li:hover{
-    background-color:#f0932b;
+    background-color:#192a56;
     
 }
 #container ul li ul li:hover a{
@@ -180,7 +180,7 @@ article{
     display:flex;
     flex-direction: column;
     width:90%;
-    border: 2px solid #f0932b;
+    border: 2px solid #192a56;
     height: 270px; 
     transition-duration:0.5s;
     z-index: 998;
@@ -205,7 +205,7 @@ article{
 }
  .headbar{   
      width: 100%;
-     background-color: #f0932b;
+     background-color: #192a56;
  }
  .headbar a{
      padding-left:5px;
@@ -271,3 +271,32 @@ p.heading {
 /* #controller div{
     transform: rotate(deg);
 } */
+
+/* small rate bpx */
+#rate_box{
+    position: fixed;
+    width:300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:1001;
+    background-color: black; opacity: 0.9;
+    left: 50%;
+    top:40%;
+    margin-top: -100px;
+    margin-left: -150px;
+    color: white
+    
+    
+}
+.exit{
+    position: absolute;
+    top: 0px;left: 265px;
+    transform: rotate(45deg);
+    font-size:20pt;
+    font-weight: bold;
+    cursor: pointer
+    
+}
