@@ -183,6 +183,17 @@
         
         </article>
         <!-- article 1 -->
+        <div id=rate_box >
+            <P class='exit'>+</P>
+            <p style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
+          <div name='rate_the_question' style='display:inline-block'>
+              <input name=rate class='rate' style='border-radius:5px' type='button' value='1' onclick='set_rate_value(1)'>
+              <input name='rate' class='rate' style='border-radius:5px' type='button' value='2' onclick='set_rate_value(2)'>
+              <input name='rate' class='rate' style='border-radius:5px' type='button' value='3' onclick='set_rate_value(3)'>
+              <input name='rate' class='rate' style='border-radius:5px' type='button' value='4' onclick='set_rate_value(4)'>
+              <input name='rate' class='rate' style='border-radius:5px' type='button' value='5' onclick='set_rate_value(5)'>
+          </div>
+        </div>
         <article id="article1">
 
             <!-- small rate box -->
@@ -269,8 +280,9 @@
             <div id="q1">
                 <h1>Question 1</h1>
                 <div style='display:inline'>
-                    <img src='../Picture/output-onlinepngtools.png' width="150px" height='40px' style='background: url(star.png) 0 0 ;'>
-                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box()'>
+                    <img id = 'final_rate_1' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(1)'>
+                    <span id='rate_times_1'style='font-size:8pt'>There is/are -- people who rated this question!</span>
                 </div>
                 
                 <p class='heading'><b>How many words are the string named "beg"? (words not characters)
@@ -305,6 +317,11 @@
             <br>
             <div id="q2">
                 <h1>Question 2</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_2' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(2)'>
+                    <span id='rate_times_2'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Store words in the string "beg" in an array.<br> Show the first and last elements
                         of the array in the span block with id=ans2;</b></p>
 
@@ -348,6 +365,11 @@
             <!-- Question 3 -->
             <div id="q3">
                 <h1>Question 3</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_3' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(3)'>
+                    <span id='rate_times_3'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Show each word in the array produced in (2) above on one line separated by commas
                         in the span block with id="ans3"</b></p>
                 <p><b>Solve:</b> <br>(1)Use the array of words created in second quesition <br>
@@ -392,6 +414,11 @@
             <!-- question 4 -->
             <div id="q4">
                 <h1>Question 4</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_4' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(4)'>
+                    <span id='rate_times_4'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'> <b>Create a new string using the value of "beg" where all the characters are
                         capitalized<br>
                         Show the new string in the span block with id="ans4"</b></p>
@@ -424,6 +451,11 @@
             <!-- question 5 -->
             <div id="q5">
                 <h1>Question 5</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_5' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(5)'>
+                    <span id='rate_times_5'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string
                         "beg"
                         Show these 5 counts on one line separated by commas in the span block with id="ans5"</b></p>
@@ -476,6 +508,11 @@
             <!-- question 6 -->
             <div id="q6">
                 <h1>Question 6</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_6' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(6)'>
+                    <span id='rate_times_6'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Show the location of each occurence of the character "e" in the string "beg"
                         on one line separated by commas in the span block with id="ans6"</b></p>
                 <p><b>Solve:</b><br>
@@ -510,6 +547,11 @@
             <!-- question 7 -->
             <div id="q7">
                 <h1>Question 7</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_7' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(7)'>
+                    <span id='rate_times_7'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the location where each word begins in the string named "beg"
                         Show the answers on one line separated by commas in the span block with id="ans7"</b></p>
                 <p><b>Solve:</b><br>
@@ -535,6 +577,11 @@
             <!--question 8-->
             <div id="q8">
                 <h1>Question 8</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_8' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(8)'>
+                    <span id='rate_times_8'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b style="left: 0px;"> Place the words in the string "beg" in a table with a one
                         pixel border,
                         with a gray backgound. Use only ten cells per row. Empty cells should contain
@@ -600,6 +647,11 @@
             <!--question 9-->
             <div id="q9">
                 <h1>Question 9</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_9' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(9)'>
+                    <span id='rate_times_9'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>
                         Replace each occurence of the blank character in "beg" with the character "*"
                         show the result in the span block with id="ans9"</b></p>
@@ -634,6 +686,11 @@
             <!--question 10-->
             <div id="q10">
                 <h1>Question 10</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_10' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(10)'>
+                    <span id='rate_times_10'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Sort the words in array created in (2) into alphabetical order
                         show the results in the span block with id="ans10" on a single line</b></p>
                 <p><b>Solve:</b><br>
@@ -652,6 +709,11 @@
             <!--question 11-->
             <div id="q11">
                 <h1>Question 11</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_11' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(11)'>
+                    <span id='rate_times_11'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the ASCII character number of each character in the string "beg"
                         separate each value with a comma and place the result on a single line in the span block
                         with id="ans11"</b></p>
@@ -695,6 +757,11 @@
             <!--question 12-->
             <div id="q12">
                 <h1>Question 12</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_12' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(12)'>
+                    <span id='rate_times_12'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Count the number of words in the string "beg" that have 2,3,4,5 or 6 characters
                         show these five counts on a single line separated by commas in the span block with id="ans12"
                     </b></p>
@@ -722,6 +789,11 @@
             <!--question 13-->
             <div id="q13">
                 <h1>Question 13</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_13' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(13)'>
+                    <span id='rate_times_13'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Ceate a new string that contains the words in the string "beg" in reverse order
                         show this new string on a single line in the span block with id="ans13"</b></p>
                 <p><b>Solve:</b><br>
@@ -751,6 +823,11 @@
             <!--question 14-->
             <div id="q14">
                 <h1>Question 14</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_14' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(14)'>
+                    <span id='rate_times_14'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Create a new string that contains the characters in the string "beg" in all
                         capital letters
                         show this new string on a single line in the span block with id="ans14"</b></p>
@@ -759,6 +836,11 @@
             <!--question 15-->
             <div id="q15">
                 <h1>Question 15</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_15' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(15)'>
+                    <span id='rate_times_15'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Store the number of times the letter "a" appears in the string "beg" in 1st
                         location;
                         <br> Store the number of times the letter "b" appears in the string "beg" in 2nd location;
@@ -799,6 +881,11 @@
             <!--question 16-->
             <div id="q16">
                 <h1>Question 16</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_16' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(16)'>
+                    <span id='rate_times_16'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Examine the radio buttons and produce a list of the three "values" of the radios
                         buttons separated by commas on a single line
                         in the span block with id="ans16"</b></p>
@@ -827,6 +914,7 @@
                 </table><br>
                 <!--editor 17-->
                 <div class="box" id="box17">
+                    
                     <div class="headbar">
                         <a onclick="runcode(editor17,'result17')">RUN</a>
                         <a onclick="changeView('box17')">Change View</a>
@@ -841,6 +929,11 @@
             <!--question 17-->
             <div id="q17">
                 <h1>Question 17</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_17' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(17)'>
+                    <span id='rate_times_17'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the value of the radio button which is checked and its elements number
                         separated by a comma on a line by itself
                         in the span block with id="ans17"</b></p>
@@ -875,6 +968,11 @@
             <!--question 18-->
             <div id="q18">
                 <h1>Question 18</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_18' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(18)'>
+                    <span id='rate_times_18'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the elements number and value of the six checkboxes in a six-row, two-column
                         table with a 2 pixel border
                         in the span block with id="ans18"</b></p>
@@ -913,6 +1011,11 @@
             <!--question 19-->
             <div id="q19">
                 <h1>Question 19</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_19' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(19)'>
+                    <span id='rate_times_19'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Examine the checkboxes and produce a list of the "values" of the checkboxes that
                         are checked. Separated the values by commas on a single line
                     </b> </p>
@@ -941,6 +1044,12 @@
             <!--question 20-->
             <div id="q20">
                 <h1>Question 20</h1>
+                
+                <div style='display:inline'>
+                    <img id = 'final_rate_20' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(20)'>
+                    <span id='rate_times_20'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the values of all the options in the select (drop down menu) named
                         "book3chapters"
                         in an fifteen-column one row table with a 2 pixel border border
@@ -978,6 +1087,11 @@
             <!--question 21-->
 <div id="q21">
     <h1>Question 21</h1>
+    <div style='display:inline'>
+        <img id = 'final_rate_21' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+        <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(21)'>
+        <span id='rate_times_21'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+    </div>
     <p class='heading'><b> Show the value of the select (drop down menu) named "book3chapters" which is selected and its selectedIndex value separated by a comma on a line by itself
           in the span block with id="ans21"</b></p>
     <p><b>Solve:</b><br>
@@ -1003,6 +1117,11 @@
             <!--question 22-->
             <div id="q22">
                 <h1>Question 22</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_22' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(22)'>
+                    <span id='rate_times_22'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Show the text phrases that are separated by commas in the string "beg2" . Each
                         phrase should be on a line by itself.
                         Place the result in the span block with id="ans22"</b></p>
@@ -1029,6 +1148,11 @@
             <!--question 23-->
             <div id="q23">
                 <h1>Question 23</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_23' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(23)'>
+                    <span id='rate_times_23'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b>Capitalize the first letter of each phrase from #22 bove (phrases are separated by
                         commas) in the original string "beg2".
                         Place each phrase should be on a line by itself.
@@ -1062,6 +1186,11 @@
             <!--question 24-->
             <div id="q24">
                 <h1>Question 24</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_24' src='../Picture/output-onlinepngtools.png' width='50px' height='40px' style='background: url(star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(24)'>
+                    <span id='rate_times_24'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
                 <p class='heading'><b> Make the third radio button ("The Track of The Storm") checked.
                         Make ALL six of the checkboxes be checked.
                         Make the select named "book3chapters" (the drop down menu) show "Fifty-Two" as the selection
@@ -1107,17 +1236,7 @@
 
 
     </div>
-    <div id=rate_box >
-        <P class='exit'>+</P>
-        <p style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
-      <div style='display:inline-block'>
-          <input  class='rate' style='border-radius:5px' type='button' value='1' onclick=''>
-          <input  class='rate' style='border-radius:5px' type='button' value='2' onclick=''>
-          <input  class='rate' style='border-radius:5px' type='button' value='3' onclick=''>
-          <input  class='rate' style='border-radius:5px' type='button' value='4' onclick=''>
-          <input  class='rate' style='border-radius:5px' type='button' value='5' onclick=''>
-      </div>
-    </div>
+    
     <div class="bg-modal"></div>
     <div id='bottom'>
         <div style="position: relative;;text-align:left;top: 220px;font-size: 8pt;padding-left: 20px;">
