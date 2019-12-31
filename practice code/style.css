@@ -287,11 +287,10 @@ p.heading {
     top:40%;
     margin-top: -100px;
     margin-left: -150px;
-    color: white
-    
-    
+    color: white;
+    transition: 1s;
 }
-.exit{
+/* .exit{
     position: absolute;
     top: 0px;left: 265px;
     transform: rotate(45deg);
@@ -299,4 +298,9 @@ p.heading {
     font-weight: bold;
     cursor: pointer
     
+} */
+
+#exit{
+    position: relative; 
+    left: 24%;top: 10px;
 }

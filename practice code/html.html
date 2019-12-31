@@ -184,15 +184,18 @@
         </article>
         <!-- article 1 -->
         <div id=rate_box >
-            <P class='exit'>+</P>
-            <p style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
-          <div name='rate_the_question' style='display:inline-block'>
-              <input name=rate class='rate' style='border-radius:5px' type='button' value='1' onclick='set_rate_value(1)'>
-              <input name='rate' class='rate' style='border-radius:5px' type='button' value='2' onclick='set_rate_value(2)'>
-              <input name='rate' class='rate' style='border-radius:5px' type='button' value='3' onclick='set_rate_value(3)'>
-              <input name='rate' class='rate' style='border-radius:5px' type='button' value='4' onclick='set_rate_value(4)'>
-              <input name='rate' class='rate' style='border-radius:5px' type='button' value='5' onclick='set_rate_value(5)'>
-          </div>
+            <!-- <P class='exit'>+</P> -->
+            <p id='rate_header'style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
+          <form name='form_rate' style='display:inline-block' method='POST' action='/practice%20code/html.html'>
+                <input type='hidden' name='que_num' id='que_num' value=''>
+                <input type='radio' name='score' id='score' value='1'>1
+                <input type='radio' name='score' id='score' value='2'>2
+                <input type='radio' name='score' id='score' value='3'>3
+                <input type='radio' name='score' id='score' value='4'>4
+                <input type='radio' name='score' id='score' value='5'>5
+                <br> <input type='submit' value='submit' id='exit'><br>
+                <p id='confirm' style='left:21.0%; top: 20px; display: none '>Submitted!</p>
+          </form>
         </div>
         <article id="article1">
 

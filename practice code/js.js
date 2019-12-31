@@ -600,23 +600,26 @@ for ( i= 0 ; i<24;i++){
     }
     rates_oj.push(rate)
 } 
-// var fs = require('fs')
-// var x = fs.readFileSync ('rates.json');
-// console.log(x);
-//open the box, set the current ques number 
+
+// OPEN THE RATE BOX, then set curr que number
 var curr_que_num = 0
 function open_rate_box(num) {
     document.getElementById('rate_box').style.display = 'flex'
     curr_que_num = num
+    document.getElementById('rate_header').innerHTML= `RATTING QUE ${num}`
+    document.getElementById('que_num').value= num.toString()// PASS num to "hidden" input 
+    document.getElementById('confirm').style.display='none'
+    
 }
 
 //close the box, send data to the sever
 function close_box(ques_num) {
+    document.getElementById('confirm').style.display='block'
     document.getElementById('rate_box').style.display = 'none'
     //send the rate data to the sever
     add_rate(ques_num)
 }
-document.querySelector('.exit').addEventListener('click', function () { close_box(curr_que_num) })
+document.querySelector('#exit').addEventListener('click', function () { close_box(curr_que_num) })
 
 
 
