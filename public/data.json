@@ -1,13 +1,13 @@
 [
     {
         "number": 1,
-        "tol_point": 20,
-        "times": 8
+        "tol_point": 0,
+        "times": 0
     },
     {
         "number": 2,
-        "tol_point": 5,
-        "times": 1
+        "tol_point": 0,
+        "times": 0
     },
     {
         "number": 3,
@@ -36,7 +36,7 @@
     },
     {
         "number": 8,
-        "tol_point": 256,
+        "tol_point": 0,
         "times": 8
     },
     {

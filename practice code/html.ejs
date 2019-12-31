@@ -323,9 +323,13 @@
             <div id="q2">
                 <h1>Question 2</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_2' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width2 = rates_data[1].tol_point/rates_data[1].times*50 %>
+                    <%if ( width2 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_2' src='../public/output-onlinepngtools.png' width='<%=width2%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(2)'>
-                    <span id='rate_times_2'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_2'style='font-size:8pt'>There is/are <%=rates_data[1].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Store words in the string "beg" in an array.<br> Show the first and last elements
                         of the array in the span block with id=ans2;</b></p>
@@ -371,9 +375,13 @@
             <div id="q3">
                 <h1>Question 3</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_3' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width3 = rates_data[2].tol_point/rates_data[2].times*50 %>
+                    <%if ( width3 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_3' src='../public/output-onlinepngtools.png' width='<%=width3%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(3)'>
-                    <span id='rate_times_3'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_3'style='font-size:8pt'>There is/are <%=rates_data[2].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Show each word in the array produced in (2) above on one line separated by commas
                         in the span block with id="ans3"</b></p>
@@ -420,9 +428,13 @@
             <div id="q4">
                 <h1>Question 4</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_4' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width4 = rates_data[3].tol_point/rates_data[3].times*50 %>
+                    <%if ( width4 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_4' src='../public/output-onlinepngtools.png' width='<%=width4%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(4)'>
-                    <span id='rate_times_4'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_4'style='font-size:8pt'>There is/are <%=rates_data[3].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'> <b>Create a new string using the value of "beg" where all the characters are
                         capitalized<br>
@@ -457,9 +469,13 @@
             <div id="q5">
                 <h1>Question 5</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_5' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width5 = rates_data[4].tol_point/rates_data[4].times*50 %>
+                    <%if ( width5 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_5' src='../public/output-onlinepngtools.png' width='<%=width5%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(5)'>
-                    <span id='rate_times_5'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_5'style='font-size:8pt'>There is/are <%=rates_data[4].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string
                         "beg"
@@ -514,9 +530,14 @@
             <div id="q6">
                 <h1>Question 6</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_6' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+
+                    <%var width6 = rates_data[5].tol_point/rates_data[5].times*50 %>
+                    <%if ( width6 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_6' src='../public/output-onlinepngtools.png' width='<%=width6%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(6)'>
-                    <span id='rate_times_6'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_6'style='font-size:8pt'>There is/are <%=rates_data[5].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Show the location of each occurence of the character "e" in the string "beg"
                         on one line separated by commas in the span block with id="ans6"</b></p>
@@ -553,9 +574,13 @@
             <div id="q7">
                 <h1>Question 7</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_7' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width7 = rates_data[6].tol_point/rates_data[6].times*50 %>
+                    <%if ( width7 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_7' src='../public/output-onlinepngtools.png' width='<%=width7%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(7)'>
-                    <span id='rate_times_7'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_7'style='font-size:8pt'>There is/are <%=rates_data[6].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the location where each word begins in the string named "beg"
                         Show the answers on one line separated by commas in the span block with id="ans7"</b></p>
@@ -583,9 +608,13 @@
             <div id="q8">
                 <h1>Question 8</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_8' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width8 = rates_data[7].tol_point/rates_data[7].times*50 %>
+                    <%if ( width8 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_8' src='../public/output-onlinepngtools.png' width='<%=width8%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(8)'>
-                    <span id='rate_times_8'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_8'style='font-size:8pt'>There is/are  p<%=rates_data[7].times.toString()%>eople who rated this question!</span>
                 </div>
                 <p class='heading'><b style="left: 0px;"> Place the words in the string "beg" in a table with a one
                         pixel border,
@@ -653,9 +682,13 @@
             <div id="q9">
                 <h1>Question 9</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_9' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width9 = rates_data[8].tol_point/rates_data[8].times*50 %>
+                    <%if ( width9 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_9' src='../public/output-onlinepngtools.png' width='<%=width9%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(9)'>
-                    <span id='rate_times_9'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_9'style='font-size:8pt'>There is/are <%=rates_data[8].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>
                         Replace each occurence of the blank character in "beg" with the character "*"
@@ -692,9 +725,14 @@
             <div id="q10">
                 <h1>Question 10</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_10' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+
+                    <%var width10 = rates_data[9].tol_point/rates_data[9].times*50 %>
+                    <%if ( width10 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_10' src='../public/output-onlinepngtools.png' width='<%=width10%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(10)'>
-                    <span id='rate_times_10'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_10'style='font-size:8pt'>There is/are <%=rates_data[9].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Sort the words in array created in (2) into alphabetical order
                         show the results in the span block with id="ans10" on a single line</b></p>
@@ -715,9 +753,13 @@
             <div id="q11">
                 <h1>Question 11</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_11' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width11 = rates_data[10].tol_point/rates_data[10].times*50 %>
+                    <%if ( width11 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_11' src='../public/output-onlinepngtools.png' width='<%=width11%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(11)'>
-                    <span id='rate_times_11'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_11'style='font-size:8pt'>There is/are <%=rates_data[10].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the ASCII character number of each character in the string "beg"
                         separate each value with a comma and place the result on a single line in the span block
@@ -763,9 +805,13 @@
             <div id="q12">
                 <h1>Question 12</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_12' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width12 = rates_data[11].tol_point/rates_data[11].times*50 %>
+                    <%if ( width12 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_12' src='../public/output-onlinepngtools.png' width='<%=width12%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(12)'>
-                    <span id='rate_times_12'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_12'style='font-size:8pt'>There is/are  p<%=rates_data[11].times.toString()%>eople who rated this question!</span>
                 </div>
                 <p class='heading'><b> Count the number of words in the string "beg" that have 2,3,4,5 or 6 characters
                         show these five counts on a single line separated by commas in the span block with id="ans12"
@@ -795,9 +841,14 @@
             <div id="q13">
                 <h1>Question 13</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_13' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width13 = rates_data[12].tol_point/rates_data[12].times*50 %>
+                    <%if ( width13 < 50 ) width1 = 50%>
+
+
+                    <img id = 'final_rate_13' src='../public/output-onlinepngtools.png' width='<%=width13%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(13)'>
-                    <span id='rate_times_13'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_13'style='font-size:8pt'>There is/are <%=rates_data[12].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Ceate a new string that contains the words in the string "beg" in reverse order
                         show this new string on a single line in the span block with id="ans13"</b></p>
@@ -829,9 +880,14 @@
             <div id="q14">
                 <h1>Question 14</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_14' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width14 = rates_data[13].tol_point/rates_data[13].times*50 %>
+                    <%if ( width14 < 50 ) width1 = 50%>
+
+
+                    <img id = 'final_rate_14' src='../public/output-onlinepngtools.png' width='<%=width14%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(14)'>
-                    <span id='rate_times_14'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_14'style='font-size:8pt'>There is/are <%=rates_data[13].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Create a new string that contains the characters in the string "beg" in all
                         capital letters
@@ -842,9 +898,14 @@
             <div id="q15">
                 <h1>Question 15</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_15' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+
+                    <%var width15 = rates_data[14].tol_point/rates_data[14].times*50 %>
+                    <%if ( width15 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_15' src='../public/output-onlinepngtools.png' width='<%=width15%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(15)'>
-                    <span id='rate_times_15'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_15'style='font-size:8pt'>There is/are <%=rates_data[14].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Store the number of times the letter "a" appears in the string "beg" in 1st
                         location;
@@ -887,9 +948,14 @@
             <div id="q16">
                 <h1>Question 16</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_16' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+
+                    <%var width16 = rates_data[15].tol_point/rates_data[15].times*50 %>
+                    <%if ( width16 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_16' src='../public/output-onlinepngtools.png' width='<%=width16%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(16)'>
-                    <span id='rate_times_16'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_16'style='font-size:8pt'>There is/are <%=rates_data[15].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Examine the radio buttons and produce a list of the three "values" of the radios
                         buttons separated by commas on a single line
@@ -935,9 +1001,13 @@
             <div id="q17">
                 <h1>Question 17</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_17' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width17 = rates_data[16].tol_point/rates_data[16].times*50 %>
+                    <%if ( width17 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_17' src='../public/output-onlinepngtools.png' width='<%=width17%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(17)'>
-                    <span id='rate_times_17'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_17'style='font-size:8pt'>There is/are <%=rates_data[17].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the value of the radio button which is checked and its elements number
                         separated by a comma on a line by itself
@@ -974,9 +1044,13 @@
             <div id="q18">
                 <h1>Question 18</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_18' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width18 = rates_data[17].tol_point/rates_data[17].times*50 %>
+                    <%if ( width18 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_18' src='../public/output-onlinepngtools.png' width='<%=width18%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(18)'>
-                    <span id='rate_times_18'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_18'style='font-size:8pt'>There is/are <%=rates_data[17].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the elements number and value of the six checkboxes in a six-row, two-column
                         table with a 2 pixel border
@@ -1017,9 +1091,13 @@
             <div id="q19">
                 <h1>Question 19</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_19' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width19 = rates_data[18].tol_point/rates_data[18].times*50 %>
+                    <%if ( width19 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_19' src='../public/output-onlinepngtools.png' width='<%=width19%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(19)'>
-                    <span id='rate_times_19'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_19'style='font-size:8pt'>There is/are <%=rates_data[18].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Examine the checkboxes and produce a list of the "values" of the checkboxes that
                         are checked. Separated the values by commas on a single line
@@ -1051,9 +1129,13 @@
                 <h1>Question 20</h1>
                 
                 <div style='display:inline'>
-                    <img id = 'final_rate_20' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width20 = rates_data[19].tol_point/rates_data[19].times*50 %>
+                    <%if ( width20 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_20' src='../public/output-onlinepngtools.png' width='<%=width20%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(20)'>
-                    <span id='rate_times_20'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_20'style='font-size:8pt'>There is/are <%=rates_data[19].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the values of all the options in the select (drop down menu) named
                         "book3chapters"
@@ -1093,9 +1175,13 @@
 <div id="q21">
     <h1>Question 21</h1>
     <div style='display:inline'>
-        <img id = 'final_rate_21' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+        <%var width21 = rates_data[20].tol_point/rates_data[20].times*50 %>
+                    <%if ( width21 < 50 ) width1 = 50%>
+
+        <img id = 'final_rate_21' src='../public/output-onlinepngtools.png' width='<%=width21%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
         <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(21)'>
-        <span id='rate_times_21'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+        <span id='rate_times_21'style='font-size:8pt'>There is/are <%=rates_data[20].times.toString()%> people who rated this question!</span>
     </div>
     <p class='heading'><b> Show the value of the select (drop down menu) named "book3chapters" which is selected and its selectedIndex value separated by a comma on a line by itself
           in the span block with id="ans21"</b></p>
@@ -1123,9 +1209,13 @@
             <div id="q22">
                 <h1>Question 22</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_22' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width22 = rates_data[21].tol_point/rates_data[21].times*50 %>
+                    <%if ( width22 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_22' src='../public/output-onlinepngtools.png' width='px'<%=width22%> height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(22)'>
-                    <span id='rate_times_22'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_22'style='font-size:8pt'>There is/are <%=rates_data[21].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Show the text phrases that are separated by commas in the string "beg2" . Each
                         phrase should be on a line by itself.
@@ -1154,9 +1244,14 @@
             <div id="q23">
                 <h1>Question 23</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_23' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+
+                    <%var width23 = rates_data[22].tol_point/rates_data[22].times*50 %>
+                    <%if ( width23 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_23' src='../public/output-onlinepngtools.png' width='<%=width23%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(23)'>
-                    <span id='rate_times_23'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_23'style='font-size:8pt'>There is/are <%=rates_data[22].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b>Capitalize the first letter of each phrase from #22 bove (phrases are separated by
                         commas) in the original string "beg2".
@@ -1192,9 +1287,13 @@
             <div id="q24">
                 <h1>Question 24</h1>
                 <div style='display:inline'>
-                    <img id = 'final_rate_24' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+
+                    <%var width24 = rates_data[23].tol_point/rates_data[23].times*50 %>
+                    <%if ( width24 < 50 ) width1 = 50%>
+
+                    <img id = 'final_rate_24' src='../public/output-onlinepngtools.png' width='<%=width24%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
                     <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(24)'>
-                    <span id='rate_times_24'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                    <span id='rate_times_24'style='font-size:8pt'>There is/are <%=rates_data[23].times.toString()%> people who rated this question!</span>
                 </div>
                 <p class='heading'><b> Make the third radio button ("The Track of The Storm") checked.
                         Make ALL six of the checkboxes be checked.

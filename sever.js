@@ -9,14 +9,14 @@ app.use(express.urlencoded({ extended: false }))
 // PUBLIC all the files
 app.use(express.static(__dirname))
 app.use(express.static('public'))
-// 
-
-
+ 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname + '/index.html'))
 })
 
 
+// Get json data of rates 
+rates_data = require('./public/data.json')
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'practice code'))
@@ -61,10 +61,9 @@ app.post('/viet',  (req,res)=>{
         res.redirect('/viet')
     }
 })
- app.locals.vn = 250
+app.locals.vn = 250
 
-console.log(app.locals.Rates_data = require('./public/data.json'))
-rates_data = require('./public/data.json')
+
 
 app.listen(3000,(req,res) => {
     console.log('listening on port: 3000')
