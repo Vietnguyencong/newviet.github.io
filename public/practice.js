@@ -76,10 +76,12 @@ pre_string5 = `
 </script>`
 set_up_editor(editor5, pre_string5);
 
-// editor6= ace.edit("code6"); // set up editor 6 (fix 5 cai)
-// pre_string6=`
-// <!--this one is easy, you can do it-->`
-// set_up_editor(editor6,pre_string6);
+editor6 = ace.edit("code6"); // set up editor 7 (fix 5 cai)
+pre_string6 = `
+<script>
+  //This one is easy, you then can do it
+</script>`
+set_up_editor(editor6, pre_string6);
 
 editor7 = ace.edit("code7"); // set up editor 7 (fix 5 cai)
 pre_string7 = `<div id='demo'>original string</div></div>

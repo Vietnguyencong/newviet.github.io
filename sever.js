@@ -14,14 +14,12 @@ app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname + '/index.html'))
 })
 
-
-// Get json data of rates 
-rates_data = require('./public/data.json')
+//GET json rate data from sever file
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'practice code'))
 app.get('/viet', (req,res) => {
-    res.render("html" ,rates_data)
+    res.render("html", rates_data)
 })
 
 // POST DATA
@@ -47,23 +45,21 @@ app.post('/viet',  (req,res)=>{
             data = JSON.stringify(data, null, 4)
             fs.writeFile('./public/data.json', data, (err) => {
                 if (err) console.log(err)
-                console.log('Write file successfully')
+                else {console.log('Write file successfully')
+                // res.redirect(`/viet#q${num+1}`)
+                window.location.reload()
+                console.log('loaded1')} // reload to update EJS page
+
+
             })
-            // res.end('yes')
-            // res.redirect('/practice%20code/html.html')
-            res.redirect(`/viet#q${num+1}`)
-            // window.location.href = `#q${num-1}`
-            res.status(204).send()
-        
-    
+            res.redirect(`/viet#box${num+3}`)
+            
     }catch {
         console.log('ERROR')
         res.redirect('/viet')
     }
 })
-app.locals.vn = 250
-
-
+rates_data = require('./public/data.json')
 
 app.listen(3000,(req,res) => {
     console.log('listening on port: 3000')

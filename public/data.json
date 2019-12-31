@@ -1,18 +1,18 @@
 [
     {
         "number": 1,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 92,
+        "times": 34
     },
     {
         "number": 2,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 12,
+        "times": 6
     },
     {
         "number": 3,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 22,
+        "times": 8
     },
     {
         "number": 4,
@@ -21,18 +21,18 @@
     },
     {
         "number": 5,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 1,
+        "times": 1
     },
     {
         "number": 6,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 6,
+        "times": 3
     },
     {
         "number": 7,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 7,
+        "times": 3
     },
     {
         "number": 8,
@@ -41,8 +41,8 @@
     },
     {
         "number": 9,
-        "tol_point": 0,
-        "times": 0
+        "tol_point": 1,
+        "times": 1
     },
     {
         "number": 10,
