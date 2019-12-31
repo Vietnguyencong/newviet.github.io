@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Practice Code</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="../public/practice.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+
+
+</head>
+
+<body>
+    <!-- <div id='controller'>
+        <div style="transform: rotate(90deg);">&lt</div>
+        <div style="transform: rotate(180deg);">&lt</div>
+
+
+    </div> -->
+    <header>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../liveEditor/liveEditor.html">Live Editor</a></li>
+            <li><a href="#">Relax</a></li>
+            <!-- <li><a title="u should know these before your first test"href="#">HTML</a></li> -->
+            <!-- <li onclick="show_hide('assignmentList')">
+<a href="#">Assignments</a>
+<ul id="assignmentList">
+    <li><a href="#">Assignment 1</a></li>
+    <li>Assignment 2</li>
+    <li>Assignment 3</li>
+</ul>
+</li>
+<li onclick= "show_hide('examList')" >
+<a href="#">Exams</a>
+<ul id="examList">
+    <li>Exam 1</li>
+    <li>Exam 2</li>
+</ul>
+</li> -->
+
+            <li id="namepage"><a href=""></a><b>Practice Code &ltVIET> </b></a></li>
+
+        </ul>
+    </header>
+    <div id="container">
+        <nav id="sidebar">
+
+            <ul id='navul'>
+                <li onclick="changeArticle('htmlArticle')"><a title="know it before your tests"><b
+                            style="font-size:12pt">HTML Intro</b></a></li>
+                <li onclick="changeArticle('article1');show_hide('assignment1');"><a><b
+                            style="font-size:12pt">Assignment 1</b></a></li>
+                <li>
+                    <ul id="assignment1">
+                        <li id='queA1' onclick="trackElement('queA1')"><a href="#q1">Question 1</a></li>
+                        <li id='queA2' onclick="trackElement('queA2')"><a href="#q2">Question 2</a></li>
+                        <li id='queA3' onclick="trackElement('queA3')"><a href="#q3">Question 3</a></li>
+                        <li id='queA4' onclick="trackElement('queA4')"><a href="#q4">Question 4</a></li>
+                        <li id='queA5' onclick="trackElement('queA5')"><a href="#q5">Question 5</a></li>
+                        <li id='queA6' onclick="trackElement('queA6')"><a href="#q6">Question 6</a></li>
+                        <li id='queA7' onclick="trackElement('queA7')"><a href="#q7">Question 7</a></li>
+                        <li id='queA8' onclick="trackElement('queA8')"><a href="#q8">Question 8</a></li>
+                        <li id='queA9' onclick="trackElement('queA9')"><a href="#q9">Question 9</a></li>
+                        <li id='queA10' onclick="trackElement('queA10')"><a href="#q10">Question 10</a></li>
+                        <li id='queA1' onclick="trackElement('queA11')"><a href="#q11">Question 11</a></li>
+                        <li id='queA3' onclick="trackElement('queA12')"><a href="#q12">Question 12</a></li>
+                        <li id='queA3' onclick="trackElement('queA13')"><a href="#q13">Question 13</a></li>
+                        <li id='queA4' onclick="trackElement('queA14')"><a href="#q14">Question 14</a></li>
+                        <li id='queA5' onclick="trackElement('queA15')"><a href="#q15">Question 15</a></li>
+                        <li id='queA6' onclick="trackElement('queA16')"><a href="#q16">Question 16</a></li>
+                        <li id='queA7' onclick="trackElement('queA17')"><a href="#q17">Question 17</a></li>
+                        <li id='queA8' onclick="trackElement('queA18')"><a href="#q18">Question 18</a></li>
+                        <li id='queA9' onclick="trackElement('queA19')"><a href="#q19">Question 19</a></li>
+                        <li id='queA10' onclick="trackElement('queA20')"><a href="#q20">Question 20</a></li>
+                        <li id='queA1' onclick="trackElement('queA21')"><a href="#q21">Question 21</a></li>
+                        <li id='queA2' onclick="trackElement('queA22')"><a href="#q22">Question 22</a></li>
+                        <li id='queA3' onclick="trackElement('queA23')"><a href="#q23">Question 23</a></li>
+                        <li id='queA4' onclick="trackElement('queA24')"><a href="#q24">Question 24</a></li>
+                        
+                    </ul>
+                <li onclick="show_hide('assignment2');changeArticle('article2')"><a><b style="font-size:12pt">Assignment
+                            2</b></a></li>
+                <li>
+                    <ul id="assignment2">
+                        <li id='queB1' onclick="trackElement('queB1')"><a href="#">Question 1</a></li>
+                        <li id='queB2' onclick="trackElement('queB2')"><a href="#">Question 3</a></li>
+                        <li id='queB3' onclick="trackElement('queB3')"><a href="#">Question 2</a></li>
+                        <li id='queB4' onclick="trackElement('queB4')"><a href="#">Question 4</a></li>
+                        <li id='queB5' onclick="trackElement('queB5')"><a href="#">Question 5</a></li>
+                    </ul>
+                </li>
+                <li onclick="show_hide('assignment3')"><a><b style="font-size:12pt">Assignment 3</b></a>
+
+
+
+            </ul>
+
+        </nav>
+
+
+        <!-- html article -->
+        <article id="htmlArticle">
+            <div><b>This page is especially designed to pass TP only.</b><br> One of the very first steps that you
+                need to take is to understand the basics of HTML and JAVASCRIPT.
+                There are a lot of good stuffs online that can help you that. Thus there is no need for me to rewrite
+                those.
+                Instead, I have personally selected some good sources which I think are the most relavant to the TP
+                course.
+                It is a not hard class but will cost you a while to practice, so by filtering out what you need to study
+                will
+                save you time.
+                These provided Links below are in order from very foundational to foundational level. It is good to take
+                a look
+                of the Links before you want to do any further practice for Assignments and Exams.
+                Even though the materials is not comprehensive to master the coding langauge but trust me, it is all you
+                need to
+                know to be able to do first TP Assignment.
+            </div>
+            <br>
+            <div style="display: flex; justify-content: center">
+
+                <ul>HTML TAGS:
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_basic.asp">HTML Basic Examples</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_elements.asp">Nested Elements</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_comments.asp"> Comment</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_links.asp"> Link</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_images.asp">Image</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_images.asp">Tables(Important)</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_classes.asp">Class</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_id.asp">ID</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_forms.asp">Form</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_form_elements.asp">Form
+                            Elements</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/html/html_scripts.asp">Js in HTML</a></li>
+
+                </ul>
+
+                <ul>JAVASCRIPT:
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_whereto.asp">Introduction</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_output.asp">Output</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_comments.asp">Comments</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_variables.asp">Variables</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">Function(Important)</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_events.asp">Events</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_string_methods.asp">Strings
+                            Methods(Important)</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_arrays.asp">Arrays(Important)</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_array_methods.asp">Arrays
+                            Methods(Important)</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_switch.asp">Switch</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_for.aspp">Loop
+                            (For)(Important)</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_while.asp">Loop
+                            (while)(Important)</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_scope.asp">Scope)</a></li>
+                </ul>
+
+
+                <ul>If interested (do not recommended):
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_this.asp">This</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_debugging.asp">Debugging</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_objects.asp">Objects</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_arrow_function.asp">Arrow Function</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_classes.asp">Class</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/js/js_es6.asp">New Version ES6</a></li>
+                </ul>
+            </div>
+
+            
+        
+        </article>
+        <!-- article 1 -->
+        <div id=rate_box >
+            <!-- <P class='exit'>+</P> -->
+            <p id='rate_header'style='left:0px;text-align:center;font-weight: bolder; font-size: largeR;'> RATE IT</p>
+          <form name='form_rate' style='display:inline-block' method='POST' action='/viet'>
+                <input style='left:0px'type='hidden' name='que_num' id='que_num' value=''>
+                <input style='left:3px' type='radio' name='score' id='score' value='1'>1
+                <input style='left:3px' type='radio' name='score' id='score' value='2'>2
+                <input style='left:3px' type='radio' name='score' id='score' value='3'>3
+                <input style='left:3px' type='radio' name='score' id='score' value='4'>4
+                <input style='left:3px'type='radio' name='score' id='score' value='5'>5
+                <br> <input type='submit' value='submit' id='exit'><br>
+                <p id='confirm' style='left:21.0%; top: 20px; display: none '>Submitted!</p>
+          </form>
+        </div>
+        <article id="article1">
+
+            <!-- small rate box -->
+         
+        
+            <div id="q0">
+                <p style="font-size: 8pt;text-align:right">Note: This materials is for instructional purpose only! I
+                    won't provide the full answers because Dr. Parks won't allow so</p>
+
+                <h1>Pre_question</h1>
+
+                <h5>Retrieve the value from the textbox in a form</h5>
+                <p>
+                    <i>Syntax: </i><code>var textvalue=document.form_name.textbox_name.value</code><br>
+                    <code>document</code> represents the whole content of the website<br>
+                    <code>form</code> contains the <code>textbox</code>
+                </p>
+
+
+
+                <!-- editor 1 -->
+                <div class="box" id="box1">
+                    <div class="headbar">
+                        <a onclick="runcode(editor1,'result1')">RUN</a>
+                        <a onclick="changeView('box1')">Change View</a>
+                        <a onclick="editor1.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit1">
+                        <div class='code' id="code1"></div>
+                        <iframe class="result" id="result1">result here</iframe>
+                    </div>
+                </div>
+                <!-- editor 1 -->
+                <br>
+                <h5>Replace substring in a string </h5>
+                <p>There is a ton of ways to do the replacement in the string. <code>replace()</code> method is one of
+                    them<br>
+                    <i>Syntax: </i><code>var newstring=string.replace(searchvalue, newvalue)</code>
+                    <!-- editor 2 -->
+                    <div class="box" id="box2">
+                        <div class="headbar">
+                            <a onclick="runcode(editor2,'result2')">RUN</a>
+                            <a onclick="changeView('box2')">Change View</a>
+                            <a onclick="editor2.resize()">Fit content</a>
+                        </div>
+                        <div class="editor" id="edit2">
+                            <div class='code' id="code2"></div>
+                            <iframe class="result" id="result2">result here</iframe>
+                        </div>
+                    </div>
+                    <!-- editor 2 -->
+                    <br>
+
+                    <h5>Remove substring in a string </h5>
+                    <p>Simply change the newvalue in the syntax above into empty string <code>""</code><br>
+                    <i>Syntax: </i><code>var newstring=string.replace(searchvalue, "")</code>
+                    <i>note:</i> only replace the first <code>searchvalue</code> founded in the string<br>
+                </p>
+                    <h5>Find substring in a string </h5>
+                    <p>Use the <code>indexOf()</code> method to return a the number which represents the postition of
+                        the substring in the main string<br>
+                        <i>Syntax: </i><code>string.indexOf()=a_number</code><br>
+                        Return <code>-1</code> when the substring is not found(see the example below)<br>
+                        we can use this property to repeat <code>replace()</code> method until we finish replacing all
+                        the substrings in the main string</p>
+
+                    <h5>Remove <b>all</b> substrings in a string </h5>
+                    <p>Use <code>while loop</code> to repeat the <code>replace()</code> method muptiple times<br>
+                        <i>Syntax: </i><code>while(boolean condition){some_code}</code></p>
+                    <div class="box" id="box3">
+                        <div class="headbar">
+                            <a onclick="runcode(editor3,'result3')">RUN</a>
+                            <a onclick="changeView('box3')">Change View</a>
+                            <a onclick="editor3.resize()">Fit content</a>
+                        </div>
+                        <div class="editor" id="edit3">
+                            <div class='code' id="code3"></div>
+                            <iframe class="result" id="result3">result here</iframe>
+                        </div>
+                    </div>
+            </div>
+            <br>
+
+            <div id="q1">
+                <h1>Question 1</h1>
+                <div style='display:inline'>
+                    <%var width1 = rates_data[0].tol_point/rates_data[0].times*50 %>
+                    <%if ( width1 < 50 ) width1 = 50%>
+                    <img id = 'final_rate_1' src='../public/output-onlinepngtools.png' width='<%=width1%>px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(1)'>
+                    <span id='rate_times_1'style='font-size:8pt'>There is/are <%=rates_data[0].times.toString()%> people who rated this question!</span>
+                </div>
+                
+                <p class='heading'><b>How many words are the string named "beg"? (words not characters)
+                        <br>Show the answer in the span block with id = "ans1"</b></p>
+                <p><b>Solve: </b>split the string beg into words use <code>split()</code> method then caculate the
+                    length using the <code>string.legnth</code> property</p>
+                <table border='1'>
+                    <tr>
+                        <td><code>string.length</code></td>
+                        <td>return the total number of characters in the string</td>
+                    </tr>
+                    <tr>
+                        <td><code>split(" ")</code></td>
+                        <td>split the string by a blank space</td>
+                    </tr>
+                </table>
+                <br>
+                <b>Note: </b>use empty string <code>''</code> if you want to split each character in the string</p>
+                <div class="box" id="box4">
+                    <div class="headbar">
+                        <a onclick="runcode(editor4,'result4')">RUN</a>
+                        <a onclick="changeView('box4')">Change View</a>
+                        <a onclick="editor4.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit4">
+                        <div class='code' id="code4"></div>
+                        <iframe class="result" id="result4">result here</iframe>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div id="q2">
+                <h1>Question 2</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_2' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(2)'>
+                    <span id='rate_times_2'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Store words in the string "beg" in an array.<br> Show the first and last elements
+                        of the array in the span block with id=ans2;</b></p>
+
+                <p><b>Solve:</b>split the string beg into words. Position of first element and the last element in an
+                    array are perspectively <code>0</code> and <code>array.legnth-1</code> </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>array.length</code></td>
+                        <td>length of the array</td>
+                    </tr>
+                    <tr>
+                        <td><code>array[0]</code></td>
+                        <td>first element</td>
+                    </tr>
+                    <tr>
+                        <td><code>array[array.length-1]</code></td>
+                        <td>Last element</td>
+                    </tr>
+
+                </table>
+                <br>
+                <p><b>Note: </b>the first element's postition in an array is <code>0</code>--> the last element position
+                    is <code>array.length-1</code>
+                    <br><b>Example: </b>length of the Array=[1,2,3] is <code>3</code>, the last element's postition is
+                    <code>2</code>> </p>
+
+                <!-- editor 5 -->
+                <div class="box" id="box5">
+                    <div class="headbar">
+                        <a onclick="runcode(editor5,'result5')">RUN</a>
+                        <a onclick="changeView('box5')">Change View</a>
+                        <a onclick="editor5.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit5">
+                        <div class='code' id="code5"></div>
+                        <iframe class="result" id="result5">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Question 3 -->
+            <div id="q3">
+                <h1>Question 3</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_3' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(3)'>
+                    <span id='rate_times_3'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Show each word in the array produced in (2) above on one line separated by commas
+                        in the span block with id="ans3"</b></p>
+                <p><b>Solve:</b> <br>(1)Use the array of words created in second quesition <br>
+                    (2)Make a for loop to go over each element of the array <br>
+                    (3)For each array element or single word that loop goes over, remove the breaking line signs
+                    <code>\n</code> if it has ones <br>
+                    (4)After the removing all the <code>\n</code> in the array, display the array in span block. It will be
+                    displayed in only 1 line</p>
+                <table border='1'>
+                    <tr>
+                        <td style='text-align: center;' colspan="2">
+                            <code>for(i=0;i&ltstring.length;i++){somecode}</code></td>
+
+                    </tr>
+                    <tr>
+                        <td><code>i=0</code></td>
+                        <td><code>i</code> is the count varible</td>
+                    </tr>
+                    <tr>
+                        <td><code>i++</code></td>
+                        <td> after going over each element the count variable will increase by 1 unit </td>
+                    </tr>
+                    <tr>
+                        <td><code>i&ltstring.length</code></td>
+                        <td>the loop will end when i = length of the string</td>
+                    </tr>
+                </table><br>
+                <!-- editor 6
+        <div class="box" id="box6"> 
+            <div class="headbar">
+                <a onclick="runcode(editor6,'result6')">RUN</a>
+                <a onclick="changeView('box6')">Change View</a>
+    
+            </div>
+            <div class="editor" id="edit6">
+                <div class='code' id="code6"></div>
+                <iframe class="result" id="result6">result here</iframe>
+            </div>
+        </div> -->
+            </div>
+
+            <!-- question 4 -->
+            <div id="q4">
+                <h1>Question 4</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_4' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(4)'>
+                    <span id='rate_times_4'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'> <b>Create a new string using the value of "beg" where all the characters are
+                        capitalized<br>
+                        Show the new string in the span block with id="ans4"</b></p>
+                <p><b>Solve:</b> use the <code>string.toUpperCase()</code> to capitalize alll the characters in beg</p>
+                <table border='1'>
+                    <tr>
+                        <td><code>string.toUpperCase()</code></td>
+                        <td>uppercase the string</td>
+                    </tr>
+                    <tr>
+                        <td><code>string.toLowerCase()</code></td>
+                        <td>LowerCase the string</td>
+                    </tr>
+
+                </table><br>
+                <!-- editor 7 -->
+                <div class="box" id="box7">
+                    <div class="headbar">
+                        <a onclick="runcode(editor7,'result7')">RUN</a>
+                        <a onclick="changeView('box7')">Change View</a>
+                        <a onclick="editor7.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit7">
+                        <div class='code' id="code7"></div>
+                        <iframe class="result" id="result7">result here</iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 5 -->
+            <div id="q5">
+                <h1>Question 5</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_5' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(5)'>
+                    <span id='rate_times_5'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Count the number of times the letters "a", "e", "i", "o", "u" appear in the string
+                        "beg"
+                        Show these 5 counts on one line separated by commas in the span block with id="ans5"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Lowercase all the characters in the string beg<br>
+                    (2) <code>split('')</code> beg into each characters<br>
+                    (3) create a new array with 5 child elements initilize by <code>0</code> conressponding with the
+                    count for 5 characters in the question<br>
+                    (3) Make a loop go through each character in beg and check if it macth one of them "a", "e", "i",
+                    "o", "u" <br>
+                    (5) if it macths one of them, then increment coressponding the child element in the new array by 1
+                </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>if(true/false){code}</code></td>
+                        <td>if the condition is true, excute the codes inside</td>
+                    </tr>
+                    <tr>
+                        <td><code>number++</code></td>
+                        <td>equivalent to number = number + 1</td>
+                    </tr>
+                    <tr>
+                        <td><code>number--</code></td>
+                        <td>equivalent to number = number - 1</td>
+                    </tr>
+                    <tr>
+                        <td><code>==</code></td>
+                        <td>equivalent to equal sign in boolean condition</td>
+                    </tr>
+                    <tr>
+                        <td><code>!=</code></td>
+                        <td>equivalent to not-equal sign in boolean condition</td>
+                    </tr>
+
+                </table><br>
+                <!-- editor 8 -->
+                <div class="box" id="box8">
+                    <div class="headbar">
+                        <a onclick="runcode(editor8,'result8')">RUN</a>
+                        <a onclick="changeView('box8')">Change View</a>
+                        <a onclick="editor8.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit8">
+                        <div class='code' id="code8"></div>
+                        <iframe class="result" id="result8">result here</iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 6 -->
+            <div id="q6">
+                <h1>Question 6</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_6' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(6)'>
+                    <span id='rate_times_6'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Show the location of each occurence of the character "e" in the string "beg"
+                        on one line separated by commas in the span block with id="ans6"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) split the beg into chars <br>
+                    (2) make a new array with no element to contain the occurences of 'e' in string beg <br>
+                    (3) make a loop going over each char in beg and if the char equals 'e', then record the position of
+                    that element <br>
+                    (3) push the recored position (should be a number) to the new array <br>
+
+                </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>array.push(some_value)</code></td>
+                        <td>add an element at the <b>end</b> of array</td>
+                    </tr>
+
+                </table><br>
+                <!-- editor 9 -->
+                <div class="box" id="box9">
+                    <div class="headbar">
+                        <a onclick="runcode(editor9,'result9')">RUN</a>
+                        <a onclick="changeView('box9')">Change View</a>
+                        <a onclick="editor9.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit9">
+                        <div class='code' id="code9"></div>
+                        <iframe class="result" id="result9">result here</iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 7 -->
+            <div id="q7">
+                <h1>Question 7</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_7' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(7)'>
+                    <span id='rate_times_7'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the location where each word begins in the string named "beg"
+                        Show the answers on one line separated by commas in the span block with id="ans7"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) the location of each word in beg is location of the blank space before it + <code>1</code><br>
+                    (2) make a for loop go over each char in beg and check if it is blank space<br>
+                    (3) if it is blank space, then <code>push</code> the position number into a new array<br>
+                    (4) the answer will be similar to the answer for question 6
+                </p>
+
+                <!-- editor 10 -->
+                <div class="box" id="box10">
+                    <div class="headbar">
+                        <a onclick="runcode(editor10,'result10')">RUN</a>
+                        <a onclick="changeView('box10')">Change View</a>
+                        <a onclick="editor10.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit10">
+                        <div class='code' id="code10"></div>
+                        <iframe class="result" id="result10">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 8-->
+            <div id="q8">
+                <h1>Question 8</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_8' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(8)'>
+                    <span id='rate_times_8'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b style="left: 0px;"> Place the words in the string "beg" in a table with a one
+                        pixel border,
+                        with a gray backgound. Use only ten cells per row. Empty cells should contain
+                        the word "null". Show the table in the span block with id="ans8"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Make a requested table with 10 columns, 1px border, grey background <br>
+                    (2) Make an outer loop go through each row of the table<br>
+                    (3) With each row, make an inner loop with repeat 10 times to put 10 words of beg in 10 columns<br>
+                    (3) Before putting the word in a cell, make an <code>if</code> statement to check if the word is
+                    empty, if empty then place <code>null</code> instead<br>
+                    (4) The length of the outer loop will be contrainted by the length of the array of words beg/10
+                    because number of rows will be the
+                    length of the outer loop and each row will have 10 words --> the total of words in beg/10 words in
+                    each row should be the length of the outer loop<br>
+                </p>
+                <p class='heading'><b>Note: </b> We can use <code>style</code> attribute of HTML tags to edit CSS
+                    properties rather than doing it from CSS file
+                </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>&ltdiv style='background:red; font-size:12pt;'></code> </td>
+                        <td>set background and font'size for the div element to red and 12pt</td>
+                    </tr>
+                    <tr>
+                        <td><code>&ltp style='color:black;'></code></td>
+                        <td>set font's color and theme font for whatever inside <code>p</code> element to black</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lttable border="integer"'></code></td>
+                        <td>set border of the table to the integer, unit:px</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lttable>&lt/table></code></td>
+                        <td>start a new table</td>
+                    </tr>
+
+
+                    <tr>
+                        <td><code>&lttr>&lt/tr></code></td>
+                        <td>a new row in the table</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lttd>&lt/td></code></td>
+                        <td>a new cell in the table</td>
+                    </tr>
+
+                </table><br>
+                <!-- editor 11 -->
+                <div class="box" id="box11">
+                    <div class="headbar">
+                        <a onclick="runcode(editor11,'result11')">RUN</a>
+                        <a onclick="changeView('box11')">Change View</a>
+                        <a onclick="editor11.resize()">Fit content</a>
+
+
+                    </div>
+                    <div class="editor" id="edit11">
+                        <div class='code' id="code11"></div>
+                        <iframe class="result" id="result11">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 9-->
+            <div id="q9">
+                <h1>Question 9</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_9' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(9)'>
+                    <span id='rate_times_9'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>
+                        Replace each occurence of the blank character in "beg" with the character "*"
+                        show the result in the span block with id="ans9"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Make a <code>while</code> loop to track all the blank characters in beg<br>
+                    (2) With each tracked element, replace it with '*'<br></p>
+                <table border='1'>
+                    <tr>
+                        <td><code>mystring.indexOf('substring')</code></td>
+                        <td>The statement return <code>-1</code> if substring doesn't exist in the main string<br>
+                            otherwise return a integer which is the position of the substring </td>
+                    </tr>
+                    <tr>
+                        <td><code>mystring.indexOf('substring')>-1</code></td>
+                        <td>If statement returns true if the substring is in the main string</td>
+                    </tr>
+
+                </table><br>
+                <!--editor 12-->
+                <div class="box" id="box12">
+                    <div class="headbar">
+                        <a onclick="runcode(editor12,'result12')">RUN</a>
+                        <a onclick="changeView('box12')">Change View</a>
+                        <a onclick="editor12.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit12">
+                        <div class='code' id="code12"></div>
+                        <iframe class="result" id="result12">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 10-->
+            <div id="q10">
+                <h1>Question 10</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_10' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(10)'>
+                    <span id='rate_times_10'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Sort the words in array created in (2) into alphabetical order
+                        show the results in the span block with id="ans10" on a single line</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Make a <code>for</code> loop to <code>lowercase</code> each element in (2)<br>
+                    (2) Use <code>sort()</code> method to sort in alphabetical order<br>
+                </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>stirng_array.sort()</code></td>
+                        <td>Sort in alphabetical order</td>
+                    </tr>
+
+                </table><br>
+
+            </div>
+            <!--question 11-->
+            <div id="q11">
+                <h1>Question 11</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_11' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(11)'>
+                    <span id='rate_times_11'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the ASCII character number of each character in the string "beg"
+                        separate each value with a comma and place the result on a single line in the span block
+                        with id="ans11"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) <code>split('')</code> beg with an empty string to create an array of characters<br>
+                    (2) Make a <code>for</code> loop going through each characters above, use <code>charCodeAt()</code>
+                    method
+                    to transfer the character into ACII number<br>
+                    (3) <code>push()</code> the newly created number above to a new array<br>
+                </p>
+
+                <p class='heading'><b>Note: </b>ACII is basically a encoding standard for English characters. It
+                    contains numbers from 0 to 9 and use those numbers
+                    to represent for English characters. Instead of wirtting 'A' you can write it as 65, the computer
+                    somehow can still understand that it is 'A' not 65
+                </p>
+                <p class='heading'><b>Note: </b> Just like an array, the first character's position of a string is
+                    <code>0</code></p>
+                <table border='1'>
+                    <tr>
+                        <td><code>string.charCodeAt(number)</code></td>
+                        <td>Used to translated a character into ACII numbers<br>
+                            The number in prenthesis is the position of the char wanted to be translated in the main
+                            string</td>
+                    </tr>
+
+                </table><br>
+                <!--editor 13-->
+                <div class="box" id="box13">
+                    <div class="headbar">
+                        <a onclick="runcode(editor13,'result13')">RUN</a>
+                        <a onclick="changeView('box13')">Change View</a>
+                        <a onclick="editor13.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit13">
+                        <div class='code' id="code13"></div>
+                        <iframe class="result" id="result13">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 12-->
+            <div id="q12">
+                <h1>Question 12</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_12' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(12)'>
+                    <span id='rate_times_12'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Count the number of words in the string "beg" that have 2,3,4,5 or 6 characters
+                        show these five counts on a single line separated by commas in the span block with id="ans12"
+                    </b></p>
+                <p><b>Solve:</b><br>
+                    (1) Make a five-element array, initilize each element as 0<br>
+                    (2) Make a loop going through all the words in beg(array of beg words)<br>
+                    (3) Check if each word's length = 2,3,4,5 or 6 by using <code>string.length</code> method <br>
+                    (4) If the condition is true, increase the count element by 1 <br> </p>
+                <p class='heading'><b>Note: </b>We can use the <code>switch</code> for this question</p>
+                <p class='heading'><b>Note: </b>Can imagine a string is an array of characters</p>
+
+                <!--editor 14-->
+                <div class="box" id="box14">
+                    <div class="headbar">
+                        <a onclick="runcode(editor14,'result14')">RUN</a>
+                        <a onclick="changeView('box14')">Change View</a>
+                        <a onclick="editor14.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit14">
+                        <div class='code' id="code14"></div>
+                        <iframe class="result" id="result14">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 13-->
+            <div id="q13">
+                <h1>Question 13</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_13' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(13)'>
+                    <span id='rate_times_13'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Ceate a new string that contains the words in the string "beg" in reverse order
+                        show this new string on a single line in the span block with id="ans13"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) With the array of words, make a loop going through each word<br>
+                    (2) With each word, use <code>split('')</code> to split the word into an array of chars<br>
+                    (3) Make an inner loop for those chars, in which the count element <code>j</code> of the inner loop
+                    won't start at 0, it will start at the last char and end at the first char of the word<br>
+                    (4) In the inner loop, append each char in a completely new word<br>
+                    (5) <code>push()</code> that new word into the new array, this new array is what we are looking for
+                </p>
+                <p class='heading'><b>Note: </b>In <code>for</code> loop: <code>for(i=0;i&ltlength;i++)</code> the count
+                    element isn't necessarily 0 but can be any number </p>
+
+                <!--editor 15-->
+                <div class="box" id="box15">
+                    <div class="headbar">
+                        <a onclick="runcode(editor15,'result15')">RUN</a>
+                        <a onclick="changeView('box15')">Change View</a>
+                        <a onclick="editor15.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit15">
+                        <div class='code' id="code15"></div>
+                        <iframe class="result" id="result15">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 14-->
+            <div id="q14">
+                <h1>Question 14</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_14' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(14)'>
+                    <span id='rate_times_14'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Create a new string that contains the characters in the string "beg" in all
+                        capital letters
+                        show this new string on a single line in the span block with id="ans14"</b></p>
+                <p><b>Solve:</b>Use <code>string.upperCase()</code> method </p>
+            </div>
+            <!--question 15-->
+            <div id="q15">
+                <h1>Question 15</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_15' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(15)'>
+                    <span id='rate_times_15'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Store the number of times the letter "a" appears in the string "beg" in 1st
+                        location;
+                        <br> Store the number of times the letter "b" appears in the string "beg" in 2nd location;
+                        <br> Store the number of times the letter "c" appears in the string "beg" in 3rd location;
+                        <br> Store the number of times the letter "d" appears in the string "beg" in 4th location;
+                        <br> etc.
+                        <br> Show the 26 counts on one line separated by commas in the span block with id="ans15"</b>
+                </p>
+                <p><b>Solve:</b><br>
+                    (1) Use ACII to do it fast<br>
+                    (2) Make an 26-element array X, initilize all the elements of X as <code>0</code>, X is used to
+                    containted the count of 26 chars<br>
+                    (3) Make a loop passing through each char of beg<br>
+                    (3) With each char that the loop passes through, increase the coressponding count element in X by 1
+                    unit<br>
+                    (5) For example: the loop is passing through 'b', then increase the 2nd location in X,br>
+                    (6) How do it now 'b' belongs to 2nd location?<br>
+                    <code>'b'.charCodeAt(0)-97</code> <code>=</code> <code>1</code> and <code>1</code> is the 2nd
+                    location in array X</p>
+                <p class='heading'><b>Note: </b>This question is hard</p>
+                <p class='heading'><b>Note: </b>In ACII, the number of 'a' char is 97 so
+                    <code>'a'.charCodeAt(0)-97</code> <code>=</code> <code>0</code> and the number of 'c' char is
+                    99 so <code>'c'.charCodeAt(0)-97</code> <code>=</code> <code>2</code></p>
+
+                <!--editor 16-->
+                <div class="box" id="box16">
+                    <div class="headbar">
+                        <a onclick="runcode(editor16,'result16')">RUN</a>
+                        <a onclick="changeView('box16')">Change View</a>
+                        <a onclick="editor16.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit16">
+                        <div class='code' id="code16"></div>
+                        <iframe class="result" id="result16">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 16-->
+            <div id="q16">
+                <h1>Question 16</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_16' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(16)'>
+                    <span id='rate_times_16'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Examine the radio buttons and produce a list of the three "values" of the radios
+                        buttons separated by commas on a single line
+                        in the span block with id="ans16"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Find the radio elements in the form twocities: there are many ways to extract the radio elements
+                    out from a form <br>
+                    (2) Name of radio buttons are 'books', use <code>document.getElementByName('books')</code>
+                    method, the method will return an array of inputs which named as 'books'
+                    <br>
+                    (3) Make a <code>for</code> loop go through all the elements in the array<br>
+                    (4) With each element, use <code>[element].value</code> to take the value out</p>
+                <p class='heading'><b>Note: </b>In Raido button list, only 1 value is chosen</p>
+                <table border='1'>
+                    <tr>
+                        <td><code>document.[formName].[elementName].value</code></td>
+                        <td>Extract the value from the element</td>
+                    </tr>
+                    <tr>
+                        <td><code>document.getsElementByName('name')</code></td>
+                        <td>Return a list of values of the element based on its name </td>
+                    </tr>
+                    <tr>
+                        <td><code>document.getsElementByTagName('div')</code></td>
+                        <td>Return a list of values of all the <code>div</code> elements </td>
+                    </tr>
+                </table><br>
+                <!--editor 17-->
+                <div class="box" id="box17">
+                    
+                    <div class="headbar">
+                        <a onclick="runcode(editor17,'result17')">RUN</a>
+                        <a onclick="changeView('box17')">Change View</a>
+                        <a onclick="editor17.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit17">
+                        <div class='code' id="code17"></div>
+                        <iframe class="result" id="result17">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 17-->
+            <div id="q17">
+                <h1>Question 17</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_17' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(17)'>
+                    <span id='rate_times_17'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the value of the radio button which is checked and its elements number
+                        separated by a comma on a line by itself
+                        in the span block with id="ans17"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) From the array of 'books' list above, make a <code>for</code> loop<br>
+                    (2) With each element in the array, check if that element is checked or not by using
+                    <code>[element].checked</code><br>
+                    (3) If the condition is <code>true</code>, store its value and its count number to 2 variables
+                </p>
+                <p class='heading'><b>Note: </b>Different to radio button, we can check multiple options in
+                    <code>checkbox</code> type input </p>
+                <table border='1'>
+                    <tr>
+                        <td><code>[element].checked</code></td>
+                        <td>Used for input element, return true if the input element is checked</td>
+                    </tr>
+                </table><br>
+                <!--editor 18-->
+                <div class="box" id="box18">
+                    <div class="headbar">
+                        <a onclick="runcode(editor18,'result18')">RUN</a>
+                        <a onclick="changeView('box18')">Change View</a>
+                        <a onclick="editor18.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit18">
+                        <div class='code' id="code18"></div>
+                        <iframe class="result" id="result18">result here</iframe>
+                    </div>
+                </div>
+
+            </div>
+            <!--question 18-->
+            <div id="q18">
+                <h1>Question 18</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_18' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(18)'>
+                    <span id='rate_times_18'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the elements number and value of the six checkboxes in a six-row, two-column
+                        table with a 2 pixel border
+                        in the span block with id="ans18"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) I will assume the element number will be its position in the 'twocities' form<br>
+                    (2) Make a loop repeating for 6 times as the table has 6 rows<br>
+                    (3) At beginning of each loop make an <code>if</code> statement to check the <code>input</code>
+                    element is <code>checkbox</code> element or not<br>
+                    (4) In each loop (each row), the first cell be the element number, the second cell will be the value
+                    of the element<br>
+                    (5) How to get the element number: the element number will be the count element <code>i</code><br>
+                    (6) how to get the value of the element: use <code>[element].value</code><br></p>
+                <p class='heading'><b>Note: </b> In <code>&ltinput type="radio" name='js' value="V"></code> statement,
+                    <code>type</code>, <code>name</code>, <code>value</code>
+                    , those are called attributes of the element. Attributes of a element normally are display at the
+                    begining HTMl tag</p>
+                <table border='1'>
+                    <tr>
+                        <td><code>document.[formName].[elementName].type</code></td>
+                        <td>Get type value of that element</td>
+                    </tr>
+                </table><br>
+                <!--editor 19-->
+                <div class="box" id="box19">
+                    <div class="headbar">
+                        <a onclick="runcode(editor19,'result19')">RUN</a>
+                        <a onclick="changeView('box19')">Change View</a>
+                        <a onclick="editor19.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit19">
+                        <div class='code' id="code19"></div>
+                        <iframe class="result" id="result19">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 19-->
+            <div id="q19">
+                <h1>Question 19</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_19' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(19)'>
+                    <span id='rate_times_19'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Examine the checkboxes and produce a list of the "values" of the checkboxes that
+                        are checked. Separated the values by commas on a single line
+                    </b> </p>
+                <p><b>Solve:</b><br>
+                    (1) Make a loop that go through every input element in the form,
+                    <br>
+                    (2) In each loop, check if the current element is <code>checkbox</code> type or not and also check
+                    if that element is checked or not using <code>[element].checked==true</code> <br>
+                </p>
+                <p class='heading'><b>Note: </b>Because [element].checked return <code>true/false</code>, we can write
+                    <code>if([element].checked){//some code}</code></p>
+
+                <!--editor 20-->
+                <div class="box" id="box20">
+                    <div class="headbar">
+                        <a onclick="runcode(editor20,'result20')">RUN</a>
+                        <a onclick="changeView('box21')">Change View</a>
+                        <a onclick="editor20.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit20">
+                        <div class='code' id="code20"></div>
+                        <iframe class="result" id="result20">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 20-->
+            <div id="q20">
+                <h1>Question 20</h1>
+                
+                <div style='display:inline'>
+                    <img id = 'final_rate_20' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(20)'>
+                    <span id='rate_times_20'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the values of all the options in the select (drop down menu) named
+                        "book3chapters"
+                        in an fifteen-column one row table with a 2 pixel border border
+                        in the span block with id="ans20"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Use <code>document.getElementByTagName('tagname')</code> to get the list of <code>option</code>
+                    elements<br>
+                    (2) Make a <code>for</code> loop repeating 15 times as the table has 15 rows and 1 column<br>
+                    (3) In each loop display the value of element in the cell<br>
+                </p>
+                <p class='heading'><b>Note: </b>In this question, we notice that the <code>option</code> elements is
+                    inside 1 <code>select</code> element named <code>book3chapters</code>, so we
+                    can use <code>document.getsElementByName('book3chapters').children</code>. The statement will return
+                    an array of child elements inside the parent element <code>select</code></p>
+                <table border='1'>
+                    <tr>
+                        <td><code>document.getElementsByName('viet').children</code></td>
+                        <td>Get the list of children elements of parent element names 'viet'</td>
+                    </tr>
+
+                </table><br>
+                <!--editor 21-->
+                <div class="box" id="box21">
+                    <div class="headbar">
+                        <a onclick="runcode(editor21,'result21')">RUN</a>
+                        <a onclick="changeView('box21')">Change View</a>
+                        <a onclick="editor21.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit21">
+                        <div class='code' id="code21"></div>
+                        <iframe class="result" id="result21">result here</iframe>
+                    </div>
+                </div>
+            </div>
+            <!--question 21-->
+<div id="q21">
+    <h1>Question 21</h1>
+    <div style='display:inline'>
+        <img id = 'final_rate_21' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+        <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(21)'>
+        <span id='rate_times_21'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+    </div>
+    <p class='heading'><b> Show the value of the select (drop down menu) named "book3chapters" which is selected and its selectedIndex value separated by a comma on a line by itself
+          in the span block with id="ans21"</b></p>
+    <p><b>Solve:</b><br>
+    (1) First, get the value of drop-down meny first, use <code>document.[formName].[elementName].value</code><br>
+    (2) Make a loop going through all the <code>option</code> elements<br>
+    (3) Compare the current value of the <code>option</code> element to the value of drop-down menu<br>
+    (4) If the condition matches, store the index and the value of the current <code>option</code> element
+ </p>
+<!--editor 25-->
+<div class="box" id="box25">
+    <div class="headbar">
+        <a onclick="runcode(editor25,'result25')">RUN</a>
+        <a onclick="changeView('box25')">Change View</a>
+        <a onclick="editor25.resize()">Fit content</a>
+    </div>
+    <div class="editor" id="edit25">
+        <div class='code' id="code25"></div>
+        <iframe class="result" id="result25">result here</iframe>
+    </div>
+</div>
+
+</div>
+            <!--question 22-->
+            <div id="q22">
+                <h1>Question 22</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_22' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(22)'>
+                    <span id='rate_times_22'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Show the text phrases that are separated by commas in the string "beg2" . Each
+                        phrase should be on a line by itself.
+                        Place the result in the span block with id="ans22"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) <code>split(',')</code> beg2 string as each phrase is seperated by a comma in the main string
+                    <br>
+                    (2) After <code>split()</code>, we have a new array of phrases, make a <code>for</code> loop and add
+                    at the end of the elements of the array <code>&ltbr></code> <br>
+                </p>
+                <!--editor 22-->
+                <div class="box" id="box22">
+                    <div class="headbar">
+                        <a onclick="runcode(editor22,'result22')">RUN</a>
+                        <a onclick="changeView('box22')">Change View</a>
+                        <a onclick="editor22.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit22">
+                        <div class='code' id="code22"></div>
+                        <iframe class="result" id="result22">result here</iframe>
+                    </div>
+                </div>
+
+            </div>
+            <!--question 23-->
+            <div id="q23">
+                <h1>Question 23</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_23' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(23)'>
+                    <span id='rate_times_23'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b>Capitalize the first letter of each phrase from #22 bove (phrases are separated by
+                        commas) in the original string "beg2".
+                        Place each phrase should be on a line by itself.
+                        Place the result in the span block with id="ans23"</b></p>
+                <p><b>Solve:</b><br>
+                    (1) Make a loop for the Array of phrases<br>
+                    (2) In each loop, declare a new variable which will later contain the new phrase with its first
+                    letter capitalized<br>
+                    (3) Append the first capitalized letter of the current phrase to the new variable, use
+                    <code>[string].toUpperCase()</code> method<br>
+                    (4) Make an inner loop going from the second letter to the last letter of the current phrase<br>
+                    (5) In the inner loop, append the current letter taken from the current phrase to the new variable,
+                    using <code>newVariable += currentPhrase[i]</code></p>
+                <p class='heading'><b>Note: </b>A string is similar to an array of chars, <code>string[2]</code> is the
+                    3rd letter of the string</p>
+
+                <!--editor 23-->
+                <div class="box" id="box23">
+                    <div class="headbar">
+                        <a onclick="runcode(editor23,'result23')">RUN</a>
+                        <a onclick="changeView('box23')">Change View</a>
+                        <a onclick="editor23.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit23">
+                        <div class='code' id="code23"></div>
+                        <iframe class="result" id="result23">result here</iframe>
+                    </div>
+                </div>
+
+            </div>
+            <!--question 24-->
+            <div id="q24">
+                <h1>Question 24</h1>
+                <div style='display:inline'>
+                    <img id = 'final_rate_24' src='../public/output-onlinepngtools.png' width='50px' height='40px' style='background: url(../public/star.png) 0 0 ;'>
+                    <input style='border-radius: 5px; margin-left: 20px' type='button' value='RATE' onclick='open_rate_box(24)'>
+                    <span id='rate_times_24'style='font-size:8pt'>There is/are -- people who rated this question!</span>
+                </div>
+                <p class='heading'><b> Make the third radio button ("The Track of The Storm") checked.
+                        Make ALL six of the checkboxes be checked.
+                        Make the select named "book3chapters" (the drop down menu) show "Fifty-Two" as the selection
+                        Place the string "DONE!" in the span block with id="ans24"
+                    </b></p>
+                <p><b>Solve:</b> Make the third radio button checked<br>
+                    (1) Make a loop of through all the elements in the <code>radio</code>> list<br>
+                    (2) In each loop, find the radio element which has its value <code>3</code> <br>
+                    (3) Once the loop find it, do <code>[element].checked=true</code><br>
+                </p>
+                <p><b>Solve:</b>Make the select named "book3chapters" (the drop down menu) show "Fifty-Two" as the
+                    selection <br>
+                    (1) Make a loop of through all the elements in the <code>option</code> list<br>
+                    (2) In each loop, find the ooption element which has its value <code>"Fifty-Two"</code><br>
+                    (3) Once the loop find it, do <code>[element].checked=true</code><br>
+                </p>
+                <!--editor 24-->
+                <div class="box" id="box24">
+                    <div class="headbar">
+                        <a onclick="runcode(editor24,'result24')">RUN</a>
+                        <a onclick="changeView('box24')">Change View</a>
+                        <a onclick="editor24.resize()">Fit content</a>
+                    </div>
+                    <div class="editor" id="edit24">
+                        <div class='code' id="code24"></div>
+                        <iframe class="result" id="result24">result here</iframe>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- article 2 -->
+        <article id="article2">
+
+        </article>
+
+        <!-- article 3 -->
+        <article id="article3">
+
+        </article>
+
+
+    </div>
+    
+    <div id="bg-modal"></div>
+    <div id='bottom'>
+        <div style="position: relative;;text-align:left;top: 220px;font-size: 8pt;padding-left: 20px;">
+            vietnguyencong99@gmail.com</div>
+        <div style="position: relative;;text-align:right;top: 220px;font-size: 8pt;padding-right: 20px;">@viet!</div>
+    </div>
+
+    <script src="../public/practice.js"></script>
+</body>
+
+</html>

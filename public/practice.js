@@ -591,15 +591,15 @@ function changeArticle(artID) {
 
 // RATE THE DIFFICULTY OF THE QUESTIONS
 
-var rates_oj = []
-for ( i= 0 ; i<24;i++){
-    var rate = {
-        'number': i+1,
-        'tol_point': 0,
-        'times': 0,
-    }
-    rates_oj.push(rate)
-} 
+// var rates_oj = []
+// for ( i= 0 ; i<24;i++){
+//     var rate = {
+//         'number': i+1,
+//         'tol_point': 0,
+//         'times': 0,
+//     }
+//     rates_oj.push(rate)
+// } 
 
 // OPEN THE RATE BOX, then set curr que number
 var curr_que_num = 0
@@ -616,37 +616,37 @@ function open_rate_box(num) {
 function close_box(ques_num) {
     document.getElementById('confirm').style.display='block'
     document.getElementById('rate_box').style.display = 'none'
-    //send the rate data to the sever
-    add_rate(ques_num)
+    //add_rate(ques_num)
 }
 document.querySelector('#exit').addEventListener('click', function () { close_box(curr_que_num) })
 
 
 
-var rate_value = 0
-var is_select = false
-/*change the rate point*/
-function set_rate_value(value) {
-    rate_value = value
-    is_select = true
-}
+// var rate_value = 0
+// var is_select = false
+// /*change the rate point*/
+// function set_rate_value(value) {
+//     rate_value = value
+//     is_select = true
+// }
 
 /*add the rate when closing the rate box*/
-function add_rate(ques_num) {
-    for (i = 0; i < rates_oj.length; i++) {
-        if (i == ques_num - 1 && is_select == true) {
-            rates_oj[i].tol_point += rate_value
-            rates_oj[i].times++
-            rate_value = 0
-            is_select = false
-            let total_point = rates_oj[i].tol_point
-            let times = rates_oj[i].times
-            let avg_points = (total_point / times) * 50
-            console.log(avg_points)
-            document.getElementById(`final_rate_${ques_num}`).width = Math.ceil(avg_points)
-            document.getElementById(`rate_times_${ques_num}`).innerHTML = `there is/are <b style='font-size:12pt'>${times}</b> people who rated this question!`
-        }
+// function add_rate(ques_num) {
+//     for (i = 0; i < rates_oj.length; i++) {
+//         if (i == ques_num - 1 && is_select == true) {
+//             rates_oj[i].tol_point += rate_value
+//             rates_oj[i].times++
+//             rate_value = 0
+//             is_select = false
+//             let total_point = rates_oj[i].tol_point
+//             let times = rates_oj[i].times
+//             let avg_points = (total_point / times) * 50
+//             console.log(avg_points)
+//             document.getElementById(`final_rate_${ques_num}`).width = Math.ceil(avg_points)
+//             document.getElementById(`rate_times_${ques_num}`).innerHTML = `there is/are <b style='font-size:12pt'>${times}</b> people who rated this question!`
+//         }
 
-    }
+//     }
 
-}
+// }
+
