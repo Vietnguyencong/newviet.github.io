@@ -42,17 +42,17 @@ app.post('/viet',  (req,res)=>{
                 break
                 }
             }
+            var run = false
             data = JSON.stringify(data, null, 4)
             fs.writeFile('./public/data.json', data, (err) => {
                 if (err) console.log(err)
-                else {console.log('Write file successfully')
+                else console.log('Write file successfully')
                 // res.redirect(`/viet#q${num+1}`)
-                window.location.reload()
-                console.log('loaded1')} // reload to update EJS page
-
-
+                // window.location.load() // reload the sever after writting data to file
+                run = true
             })
-            res.redirect(`/viet#box${num+3}`)
+            if (run) res.redirect(`/viet#box${num+3}`)
+            
             
     }catch {
         console.log('ERROR')
