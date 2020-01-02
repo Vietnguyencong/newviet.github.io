@@ -1,0 +1,29 @@
+{
+  "name": "newviet.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start" : "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vietnguyencong/newviet.github.io.git"
+  },
+  "keywords": [],
+  "author": "Vietnc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vietnguyencong/newviet.github.io/issues"
+  },
+  "homepage": "https://github.com/Vietnguyencong/newviet.github.io#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "engines" :{
+    "node" : "12.13.1"
+  }
+}
