@@ -1,13 +1,13 @@
 [
     {
         "number": 1,
-        "tol_point": 92,
-        "times": 34
+        "tol_point": 153,
+        "times": 56
     },
     {
         "number": 2,
-        "tol_point": 12,
-        "times": 6
+        "tol_point": 18,
+        "times": 11
     },
     {
         "number": 3,

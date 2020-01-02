@@ -615,12 +615,12 @@ function open_rate_box(num) {
 }
 
 //close the box, send data to the sever
-function close_box(ques_num) {
+function close_box() {
     document.getElementById('confirm').style.display='block'
     document.getElementById('rate_box').style.display = 'none'
     //add_rate(ques_num)
 }
-document.querySelector('#exit').addEventListener('click', function () { close_box(curr_que_num) })
+document.querySelector('#exit').addEventListener('click', function () { close_box() })
 
 
 
